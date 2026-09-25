@@ -26,6 +26,54 @@ Source notes:
 - https://www.criterion.com/current/posts/7604-once-upon-a-time-in-china-the-complete-films-past-master
 - https://www.bfi.org.uk/interviews/sammo-hung
 
+## Internal submodes
+
+Choose one dominant submode. Do not blend all of them automatically.
+
+### TH-MODE-A — Grounded martial-arts epic
+Reference tendency:
+*Once Upon a Time in China*-type balance of readable martial-arts skill, prop/set invention and larger historical/art-direction world.
+
+Use:
+- clearer full-body proof,
+- attack-defense balance,
+- props and set geometry,
+- occasional expressive insert,
+- strong spatial escalation.
+
+Best for:
+traditional kung-fu / Nanquan-vs-Longfist / ladder, courtyard, warehouse or corridor combat.
+
+### TH-MODE-B — Dark kinetic fragmented wuxia
+Reference tendency:
+*The Blade*-type furious kineticism, expressive lighting, freer camera and inventive POV.
+
+Use:
+- tighter proximity,
+- aggressive reframing,
+- partial bodies,
+- POV/near-POV threat,
+- impact fragmentation,
+- rough environment texture,
+while preserving enough anchor shots to avoid AI spatial collapse.
+
+Best for:
+brutal chase/fight, narrow alleys, workshops, dark courtyards.
+
+### TH-MODE-C — Fantastical vertical wuxia
+Reference tendency:
+fantasy-wuxia works such as *Zu* / supernatural action traditions associated with Tsui's career.
+
+Use:
+- stronger verticality,
+- deeper compositions,
+- heightened costume/environment motion,
+- qinggong and elevated action,
+- visual-effects-friendly spatial design.
+
+Constraint:
+only choose this when the user actually wants a more fantastical level. Do not silently turn grounded kung-fu into flight.
+
 ## Profile DNA
 
 ### 1. Movement feels larger than the technique
