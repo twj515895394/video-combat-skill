@@ -1,11 +1,11 @@
 ---
 name: video-combat-director
-description: Design physically continuous fight choreography and AI-video prompts for boxing, kickboxing, Muay Thai, Sanda, MMA, grappling, Chinese martial arts, wuxia and cinematic action. Use when the user asks for fight design, combat choreography, martial-arts action, wuxia combat, fight-camera design, action prompt generation, or analysis/repair of generated fight footage.
+description: Design physically continuous fight choreography and cinematic AI-video prompts for boxing, kickboxing, Muay Thai, Sanda, MMA, grappling, Chinese martial arts, wuxia and action cinema. Use when the user asks for fight design, combat choreography, martial-arts action, wuxia combat, cinematic fight-camera design, action prompt generation, or analysis/repair of generated fight footage.
 ---
 
 # Video Combat Director
 
-Design the fight as a physical state machine before writing cinematic prose.
+Design the fight as a physical state machine first, then design how cinema reveals that action.
 
 ## Mandatory execution order
 
@@ -19,28 +19,32 @@ Design the fight as a physical state machine before writing cinematic prose.
    - primary tools,
    - preferred entry and exit,
    - defensive language.
-5. If the sequence needs help becoming continuous, select one Combination Pattern.
-6. Load Atomic Action detail only for mechanics that need extra precision.
+5. Select Combination Pattern only when continuity needs one.
+6. Load Atomic Action detail only for mechanics needing extra precision.
 7. Build spatial ledger: screen side, facing direction, distance, feet, balance, obstacles.
 8. Choreograph with Zero Idle: previous result -> next starting state.
-9. Assign camera only after body mechanics are valid.
-10. Run QC from `references/qc-gates.md`.
-11. Output the user's requested prompt format.
+9. Only after body mechanics are valid, assign shot function:
+   - spatial proof,
+   - biomechanics proof,
+   - threat / POV,
+   - impact insert,
+   - momentum/result,
+   - environment result.
+10. If cinematic shooting matters, route through `references/directing/directing-router.md`.
+11. If a film/director/choreographer reference is requested, load one analytical Style Profile and translate it into abstract visual grammar.
+12. Run QC from `references/qc-gates.md`.
+13. Output the user's requested prompt format.
 
 ## Composition model
 
 A fight is assembled as:
 
-`BASE STYLE(S) + COMBINATION CAUSALITY + OPTIONAL ATOMIC DETAIL + CINEMATIC LAYER`
+`BASE STYLE(S) + COMBINATION CAUSALITY + OPTIONAL ATOMIC DETAIL + CINEMATIC LAYER + DIRECTING GRAMMAR + OPTIONAL STYLE PROFILE`
 
 Examples:
-- `boxing + counter-conversions + grounded-modern-action`
-- `muay-thai + pressure-chains + grounded-modern-action`
-- `sanda + clinch-throw-transitions`
-- `southern-nanquan vs northern-longfist + range-conversions + grounded-wuxia`
-- `bajiquan + pressure-chains + hong-kong-action-language`
-
-**Wuxia is not a base martial art.** It is a cinematic transformation layer placed on top of concrete movement mechanics.
+- `boxing + counter-conversions + grounded-modern-action + impact-inserts`
+- `sanda + clinch-throw-transitions + full-body throw proof`
+- `southern-nanquan vs northern-longfist + range-conversions + grounded-wuxia + wuxia-spatial-chains + new-wave-HK-wuxia profile`
 
 ## Hard biomechanics rule
 
@@ -74,7 +78,55 @@ Never:
 Use:
 `attack -> deflection/impact/miss -> altered balance/position -> immediate continuation`
 
-Misses, blocks, catches, stumbles, wall contact and landings are valuable choreography states.
+Misses, blocks, catches, stumbles, wall contact and landings are choreography states.
+
+## Film-language rule
+
+The camera does not need to show:
+- both fighters,
+- both faces,
+- full bodies,
+in every shot.
+
+A valid action shot may isolate:
+- fist approaching lens,
+- shin meeting forearm,
+- palm compressing chest fabric,
+- wrist trap,
+- support foot pivot,
+- foot planting on pillar,
+- shoulder hitting wall,
+- wood splintering,
+- robe/sleeve wiping frame,
+- landing feet,
+- eyes snapping toward threat.
+
+But partial/detail shots must inherit a previously understandable spatial relationship and cannot hide mechanics that still need proof.
+
+## Shot-function rule
+
+Choose framing by what the audience must learn.
+
+- Wide/full-body: route, footwork, kicks, throws, qinggong, multiple fighters.
+- Medium: attack-defense relationship, bridge/clinch, angle.
+- Close: contact, grip, guard compression, reaction, foot plant.
+- Extreme close: rare decisive detail only.
+
+Complex body mechanics -> simpler camera.
+Simple body route -> camera may be more expressive.
+
+## Style-profile rule
+
+Named filmmakers/choreographers may be used internally as analytical references.
+
+Final prompt should translate to abstract mechanisms such as:
+- kinetic new-wave Hong Kong wuxia,
+- rhythmic widescreen staging,
+- prop-driven action geometry,
+- grounded full-body martial-arts proof,
+- practical weighted stunt action.
+
+Do not copy one exact scene or output only “in the style of [name]”.
 
 ## AI-video physical constraints
 
@@ -87,23 +139,6 @@ When appropriate:
 - no unsupported floating,
 - no unexplained side swap or teleportation.
 
-## Camera rule
-
-Camera serves readable action.
-
-Use shot functions:
-- spatial proof,
-- biomechanics proof,
-- impact proof,
-- momentum/result proof.
-
-Not every shot needs both fighters.
-Not every shot needs faces.
-Feet, hips, hands, forearms, contact points, clothing momentum and landing can carry a shot.
-
-Complex body mechanics -> simpler camera.
-Complex camera move -> simpler body route.
-
 ## Reference routing
 
 For substantial tasks:
@@ -112,11 +147,12 @@ For substantial tasks:
 3. optionally choose one pairing file,
 4. optionally choose one combination-pattern file,
 5. optionally choose one cinematic layer,
-6. load atomic/core detail only when necessary.
+6. optionally choose directing files and one style profile,
+7. load atomic/core detail only when necessary.
 
-Do not load sibling style files "for inspiration".
+Do not load sibling files "for inspiration".
 
 ## Output principle
 
-Reference material is a mechanics vocabulary, not text to copy verbatim.
-Translate selected knowledge into the user's exact fighters, space, duration and desired result.
+Reference material is a mechanics and directing vocabulary, not text to copy verbatim.
+Translate selected knowledge into the user's exact fighters, space, duration, desired result and visual intent.
