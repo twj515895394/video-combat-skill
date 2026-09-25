@@ -4,9 +4,9 @@ Run silently before final output.
 
 ## QC-0 Routing Integrity
 - Did the task go through reference-router?
-- Were only necessary style / pairing / combination / action / cinematic / core files selected?
+- Were only necessary style / pairing / combination / action / cinematic / directing / core files selected?
 - Was Wuxia used as a cinematic layer rather than replacing base mechanics?
-- Were unrelated sibling styles excluded?
+- Were unrelated sibling files excluded?
 - Was the reference budget kept minimal?
 
 ## QC-1 Body State Continuity
@@ -45,28 +45,56 @@ Fail if any important beat depends on reset or teleportation.
 ## QC-5 Style Integrity
 - Style is expressed through range, stance, tools and tactical choices, not just labels.
 - Mixed-style fighters have visibly different decision logic.
-- Cinematic layer does not erase base style.
+- Cinematic/directing layers do not erase base style.
 
 ## QC-6 Combination Causality
-For every multi-action chain:
-- does action 2 exist because action 1 changed the state?
-- did a miss, block, impact, landing, catch, stumble or positional change create the next opening?
-- is the continuation compatible with current distance and stance?
-- is a generic combination pattern being used instead of copying a frozen combo list?
-- if initiative flips, is there a physical reason?
+- Does action 2 exist because action 1 changed the state?
+- Did a miss, block, impact, landing, catch, stumble or positional change create the next opening?
+- Is continuation compatible with current distance and stance?
+- If initiative flips, is there a physical reason?
 
 Fail if choreography is just technique A + technique B + technique C with no causal bridge.
 
-## QC-7 Camera Readability
-- Camera has a purpose.
-- Body-complex moment uses readable framing.
-- Impact point is not hidden.
-- Major footwork can be understood.
-- Not every shot is forced to show faces.
-- Not every shot is forced to show both fighters.
-- No unnecessary orbiting during complex choreography.
+## QC-7 Directing Function
+For every shot:
+- What is the primary information?
+- Does framing prove that information?
+- If only one fighter/one limb/no face is shown, is spatial context still recoverable?
+- Is the shot adding new information rather than decorative coverage?
+- Does a detail shot preserve the established attack direction?
+- Does a POV/attack-to-camera shot clearly belong to one side of the exchange?
 
-## QC-8 AI Prompt Safety
+## QC-8 Impact Insert Integrity
+If using impact close-ups:
+- approach was established,
+- contact point is readable,
+- body/material reaction occurs after contact,
+- result inherits the same force direction,
+- impact is not shown twice unless explicitly desired.
+
+## QC-9 Camera Motion
+- Camera movement has a target and reason.
+- Complex mechanics use simpler camera.
+- Whip-pan ends on readable subject.
+- Landing intercept preserves trajectory.
+- No unnecessary orbiting.
+- Camera does not cross between fighters without re-establishing space.
+
+## QC-10 Environment Continuity
+- Props/obstacles exist before they are used.
+- Damage occurs only after contact.
+- broken/cracked state persists.
+- debris and dust follow inertia.
+- environment interaction changes route or provides useful physical feedback.
+
+## QC-11 Style Profile Translation
+If a filmmaker/choreographer profile was loaded:
+- were only abstract mechanisms transferred?
+- did the output avoid copying a specific scene/shot order?
+- did the profile improve staging, rhythm or subject selection rather than replace choreography?
+- did the final prompt translate the profile into descriptive film language?
+
+## QC-12 AI Prompt Safety
 When relevant:
 - bare hands / gloves / weapons are explicitly controlled,
 - speed is explicitly controlled,
@@ -75,9 +103,9 @@ When relevant:
 - no extra weapon props,
 - no random synchronized jumping.
 
-## QC-9 Duration Density
+## QC-13 Duration Density
 For ~10 seconds:
 - use roughly 3 main kinetic phases,
 - prefer a limited number of readable action nodes,
 - do not overload with named techniques,
-- every 2-3 seconds should contain a meaningful momentum transfer or spatial change.
+- every 2-3 seconds should contain meaningful momentum transfer, information change or spatial change.
