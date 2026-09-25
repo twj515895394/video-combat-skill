@@ -15,7 +15,7 @@ Use for:
 - competition terminology,
 - event definitions.
 
-Examples: IWUF, World Boxing, WAKO, IMMAF, UWW.
+Examples: IWUF, World Boxing, WAKO, IMMAF, UWW, IJF, WT, IBJJF, FIAS.
 
 Do not infer one universal technical execution from rules alone.
 
@@ -53,11 +53,26 @@ Never silently merge Tier D into real martial-art technique files.
 
 Every candidate must be classified into exactly one primary target:
 
-1. **STYLE** — changes a style's tactical identity or combination grammar.
+1. **STYLE** — changes a style's tactical identity, preferred range, or style-specific combination grammar.
 2. **ATOMIC ACTION** — reusable biomechanical primitive across styles.
-3. **CINEMATIC** — camera/stunt/film transformation.
-4. **PAIRING** — style-vs-style interaction pattern.
-5. **CORE** — universal physical or AI-generation constraint.
+3. **COMBINATION** — reusable causal chain connecting states across multiple actions.
+4. **CINEMATIC** — camera/stunt/film transformation.
+5. **PAIRING** — style-vs-style interaction pattern.
+6. **CORE** — universal physical or AI-generation constraint.
+
+### STYLE vs COMBINATION
+
+Use STYLE when:
+- the pattern is characteristic of one style's tactical identity.
+
+Use COMBINATION when:
+- the pattern is reusable across multiple styles,
+- the value lies in state transition rather than the named technique,
+- e.g. miss -> forced landing -> counter window,
+- block -> guard compression -> shorter tool,
+- impact stumble -> recovery step -> pursuit.
+
+Do not duplicate the same chain in several style files.
 
 ## Candidate decision
 
@@ -89,7 +104,13 @@ Two names that share the same:
 
 may belong to one atomic card with style-specific aliases.
 
-Conversely, two techniques with similar names but different support/trajectory/result should remain separate.
+For COMBINATION patterns, deduplicate by:
+- trigger state,
+- changed state,
+- continuation opportunity,
+- tactical purpose.
+
+Conversely, similar names with different support/trajectory/result or different causal state changes should remain separate.
 
 ## Extraction template
 
@@ -120,6 +141,26 @@ confidence:
 decision: ADD|MERGE|EXISTING|HOLD|REJECT
 ```
 
+For a reusable combination:
+
+```yaml
+candidate_name:
+source_class:
+target_type: COMBINATION
+target_file:
+trigger_state:
+first_action:
+defender_response:
+changed_state:
+continuation_opportunity:
+compatible_style_families:
+incompatible_conditions:
+camera_proof:
+ai_failure_modes:
+confidence:
+decision: ADD|MERGE|EXISTING|HOLD|REJECT
+```
+
 ## Traditional martial-arts policy
 
 Do not claim:
@@ -140,10 +181,11 @@ When the user supplies fight footage:
 2. ignore move names unless independently known,
 3. segment into action beats,
 4. extract support/trajectory/contact/exit,
-5. identify camera-specific effects separately,
-6. route each candidate,
-7. dedupe only against the exact target file,
-8. write approved ADD/MERGE items.
+5. separately extract causal transitions between beats,
+6. identify camera-specific effects separately,
+7. route each candidate,
+8. dedupe only against the exact target file,
+9. write approved ADD/MERGE items.
 
 Never scan the entire reference tree for every candidate.
 
@@ -153,7 +195,9 @@ Before writing:
 - mechanic is physically describable,
 - target category is correct,
 - base style and cinematic layer are not conflated,
+- atomic action and combination causality are not duplicated,
 - action has an exit state,
+- combination has trigger -> changed state -> continuation,
 - wording is AI-video usable,
 - duplicate check is target-local,
 - source confidence is recorded when uncertain.
