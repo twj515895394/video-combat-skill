@@ -33,6 +33,7 @@ One shot should have one primary job and at most one secondary job.
 | 撞墙、断桌、木屑、石粉、环境反馈 | `environment-impact.md` |
 | 长镜头 vs 快切、动作匹配剪辑 | `editing-rhythm.md` |
 | 全景/中景/近景之间保持方向连续 | `screen-direction-and-continuity.md` |
+| 需要直接选可复用“镜头卡” | `shot-pattern-library.md` |
 
 ## D2 — Style profile
 
@@ -51,7 +52,10 @@ A Style Profile:
 For one short 5-15 second fight:
 - 1 directing router,
 - usually 1-2 shot-technique files,
+- optionally `shot-pattern-library.md` when concrete shot-card selection is needed,
 - optionally 1 style profile.
+
+Do not load the shot-pattern library merely because cinematic shooting is requested; use it when the director needs concrete reusable shot modules.
 
 Do not load every directing file.
 
