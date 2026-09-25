@@ -56,11 +56,24 @@ Every candidate must be classified into exactly one primary target:
 1. **STYLE** — changes a style's tactical identity, preferred range, or style-specific combination grammar.
 2. **ATOMIC ACTION** — reusable biomechanical primitive across styles.
 3. **COMBINATION** — reusable causal chain connecting states across multiple actions.
-4. **DIRECTING** — reusable shot, framing, camera, editing, impact-insert or environment-photography mechanism.
-5. **STYLE PROFILE** — a reusable analytical action-cinema grammar distilled from multiple works/sources; never one exact scene copy.
-6. **CINEMATIC** — stunt/world transformation such as grounded wuxia or qinggong.
-7. **PAIRING** — style-vs-style interaction pattern.
-8. **CORE** — universal physical or AI-generation constraint.
+4. **ARCHETYPE** — reusable macro fight-scene engine such as pressure, pursuit, confined-space or outnumbered structure.
+5. **DIRECTING** — reusable shot, framing, camera, editing, impact-insert or environment-photography mechanism.
+6. **STYLE PROFILE** — a reusable analytical action-cinema grammar distilled from multiple works/sources; never one exact scene copy.
+7. **CINEMATIC** — stunt/world transformation such as grounded wuxia or qinggong.
+8. **PAIRING** — style-vs-style interaction pattern.
+9. **CORE** — universal physical or AI-generation constraint.
+
+### ARCHETYPE vs COMBINATION vs DIRECTING
+
+Use ARCHETYPE when the reusable knowledge answers:
+- what drives the whole fight,
+- who owns macro initiative,
+- how the scene escalates across phases,
+- how space is used across the sequence.
+
+Use COMBINATION when the knowledge explains a local causal action chain.
+
+Use DIRECTING when it explains how the audience sees the action.
 
 ### STYLE vs COMBINATION vs DIRECTING
 
