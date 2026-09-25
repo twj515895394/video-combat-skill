@@ -2,9 +2,7 @@
 
 Selective loading is mandatory. This repository is designed to grow large; broad scanning is a failure mode.
 
-## Routing sequence
-
-### R0 — classify the request
+## R0 — classify the request
 
 Determine:
 - task: design / prompt / repair / analyze / reference-ingest
@@ -16,11 +14,9 @@ Determine:
 - whether fighters use different styles
 - whether aerial / grappling / environment interaction is required
 
-### R1 — choose base style
+## R1 — choose base style
 
 Load the exact style file when explicitly named.
-
-Direct map:
 
 | User language | Route |
 |---|---|
@@ -30,18 +26,32 @@ Direct map:
 | 散打 / 散手 / Sanda | `styles/sanda.md` |
 | MMA / 综合格斗 | `styles/mma.md` |
 | 摔跤 / wrestling / grappling | `styles/wrestling-grappling.md` |
-| 摔跤式中国跤 / 摔跤 / Shuai Jiao | `styles/chinese/shuai-jiao.md` |
+| 空手道 / Karate | `styles/karate.md` |
+| 跆拳道 / Taekwondo / TKD | `styles/taekwondo.md` |
+| 柔道 / Judo | `styles/judo.md` |
+| 巴西柔术 / BJJ | `styles/brazilian-jiu-jitsu.md` |
+| Sambo / 桑搏 | `styles/sambo.md` |
+| Savate / 法式踢拳 | `styles/savate.md` |
+| Lethwei / 缅甸拳 | `styles/lethwei.md` |
+| Capoeira / 卡波耶拉 | `styles/capoeira.md` |
+| 中国跤 / Shuai Jiao | `styles/chinese/shuai-jiao.md` |
 | 南拳 / southern fist | `styles/chinese/southern-nanquan.md` |
 | 北拳 / 长拳 / northern long fist | `styles/chinese/northern-longfist.md` |
+| 少林 / Shaolin | `styles/chinese/shaolin-general.md` |
 | 咏春 / Wing Chun | `styles/chinese/wing-chun.md` |
+| 洪拳 / Hung Gar | `styles/chinese/hung-gar.md` |
+| 蔡李佛 / Choy Li Fut | `styles/chinese/choy-li-fut.md` |
 | 八极拳 / Baji | `styles/chinese/bajiquan.md` |
 | 形意拳 / Xingyi | `styles/chinese/xingyiquan.md` |
 | 八卦掌 / Bagua | `styles/chinese/baguazhang.md` |
 | 太极技击 | `styles/chinese/taijiquan-combat.md` |
+| 通背 / Tongbei | `styles/chinese/tongbei.md` |
+| 劈挂 / Pigua | `styles/chinese/pigua.md` |
+| 翻子 / Fanzi | `styles/chinese/fanzi.md` |
 
 If the user only says "中国武术", read `style-index.md` first, then select one family based on requested range and movement character.
 
-### R2 — choose cinematic layer
+## R2 — choose cinematic layer
 
 | Intent | Route |
 |---|---|
@@ -52,14 +62,29 @@ If the user only says "中国武术", read `style-index.md` first, then select o
 
 Cinematic files never replace the base style.
 
-### R3 — mixed-style fight
+## R3 — mixed-style fight
 
 If two fighters use different systems and the tactical mismatch matters, load:
 `pairings/style-vs-style.md`
 
 Do not load it when both fighters share the same style and the user only needs a simple exchange.
 
-### R4 — atomic mechanics only when needed
+## R4 — combination grammar
+
+If the problem is not “what move exists” but “how should one move causally become the next,” read:
+`combinations/combination-router.md`
+
+Default to at most one combination file for a short fight.
+
+Typical triggers:
+- continuous offensive pressure,
+- defense-to-counter,
+- strike-to-clinch/throw,
+- repeated long/close range changes,
+- missed move / stumble / landing continuation,
+- wuxia environmental movement.
+
+## R5 — atomic mechanics only when needed
 
 If the selected style tells the director **what tactical action to use** but the exact body mechanics need expansion, read `actions/action-router.md` and load only the exact atomic category needed.
 
@@ -71,9 +96,7 @@ Examples:
 
 Do not load all atomic files automatically.
 
-### R5 — troubleshooting
-
-Load core files only for the problem being repaired:
+## R6 — troubleshooting
 
 | Failure | Reference |
 |---|---|
@@ -83,18 +106,13 @@ Load core files only for the problem being repaired:
 | 动作停顿 / 回合制 | `core/momentum-continuity.md` |
 | 镜头遮住动作 | `core/action-camera.md` |
 
-### R6 — knowledge maintenance
+## R7 — knowledge maintenance
 
-If the user asks to:
-- 学习这个参考视频,
-- 看看有没有值得沉淀进 Skill,
-- 补充 reference,
-- 扩充某个流派招式库,
-- 从资料中提取可复用动作,
+If the user asks to learn from a reference, expand the library, or extract reusable combat assets, read:
+`reference-ingestion-pipeline.md`
 
-read `reference-ingestion-pipeline.md`.
-
-Route every candidate to exactly one primary target: STYLE / ATOMIC ACTION / CINEMATIC / PAIRING / CORE.
+Route every candidate to exactly one primary target:
+STYLE / ATOMIC ACTION / COMBINATION / CINEMATIC / PAIRING / CORE.
 
 Never mutate the library merely because a reference was analyzed; maintenance intent must be explicit.
 
@@ -105,14 +123,15 @@ For one short fight-generation task, default maximum:
 - 1-2 base style references
 - 0-1 cinematic layer
 - 0-1 pairing reference
+- 0-1 combination pattern
 - 0-2 atomic action files only when mechanics need expansion
 - 0-1 core repair file
 
-Target: 2-5 specialized files, not the whole library.
+Target: 2-6 specialized files, not the whole library.
 
 ## Precedence
 
-User explicit choreography > physical continuity > selected base-style mechanics > cinematic layer > optional flourish.
+User explicit choreography > physical continuity > selected base-style mechanics > combination causality > cinematic layer > optional flourish.
 
 Never force a reference move into a sequence if it breaks the user's action, duration, body state or spatial continuity.
 
