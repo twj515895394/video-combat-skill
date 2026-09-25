@@ -5,46 +5,121 @@ description: Design physically continuous fight choreography and cinematic AI-vi
 
 # Video Combat Director
 
-Design the fight as a physical state machine first, then design how cinema reveals that action.
+Design the fight as a physical state machine first, then design the macro fight engine, then design how cinema reveals that action.
 
 ## Mandatory execution order
 
-1. Resolve duration, participants, weapons, environment, initiator, outcome and requested combat style.
-2. Read `references/reference-router.md`.
-3. Select the smallest useful reference set. Never recursively scan `references/`.
-4. Establish each fighter's Combat DNA:
+1. **Resolve the brief**
+   - duration,
+   - participants,
+   - armed/unarmed,
+   - environment,
+   - initiator,
+   - combat style(s),
+   - realism / wuxia level,
+   - desired outcome,
+   - target generation format when relevant.
+   - If a missing core point would materially change choreography, read `references/brief-confirmation.md` and ask only the minimum necessary clarification.
+   - Never re-ask information already supplied.
+   - Infer minor details and proceed.
+
+2. **Read `references/reference-router.md`**
+
+3. **Select the smallest useful reference set**
+   - Never recursively scan `references/`.
+
+4. **Choose one Fight Scene Archetype when macro structure benefits from it**
+   - pressure,
+   - counter,
+   - pursuit,
+   - confined space,
+   - vertical terrain,
+   - environment-driven,
+   - outnumbered,
+   - boss escalation,
+   - peer duel,
+   - wuxia courtyard.
+
+5. **Establish each fighter's Combat DNA**
    - base style,
    - effective range,
    - stance / weight bias,
    - primary tools,
    - preferred entry and exit,
    - defensive language.
-5. Select Combination Pattern only when continuity needs one.
-6. Load Atomic Action detail only for mechanics needing extra precision.
-7. Build spatial ledger: screen side, facing direction, distance, feet, balance, obstacles.
-8. Choreograph with Zero Idle: previous result -> next starting state.
-9. Only after body mechanics are valid, assign shot function:
+
+6. **Select one Combination Pattern only when continuity needs one**
+
+7. **Load Atomic Action detail only when mechanics need extra precision**
+
+8. **Build spatial ledger**
+   - screen side,
+   - facing direction,
+   - distance,
+   - feet,
+   - balance,
+   - height,
+   - obstacles.
+
+9. **Choreograph with Zero Idle**
+   - previous result -> next starting state.
+
+10. **Assign shot function only after body mechanics are valid**
    - spatial proof,
    - biomechanics proof,
    - threat / POV,
    - impact insert,
    - momentum/result,
    - environment result.
-10. If cinematic shooting matters, route through `references/directing/directing-router.md`.
-11. If a film/director/choreographer reference is requested, load one analytical Style Profile and translate it into abstract visual grammar.
-12. Run QC from `references/qc-gates.md`.
-13. Output the user's requested prompt format.
+
+11. **If cinematic shooting matters, route through `references/directing/directing-router.md`**
+
+12. **If a film/director/choreographer reference is requested, load one analytical Style Profile and translate it into abstract visual grammar**
+
+13. **Run QC from `references/qc-gates.md`**
+
+14. **Output the user's requested prompt format**
 
 ## Composition model
 
-A fight is assembled as:
+`BRIEF + FIGHT ARCHETYPE + BASE STYLE(S) + COMBINATION CAUSALITY + OPTIONAL ATOMIC DETAIL + CINEMATIC LAYER + DIRECTING GRAMMAR + OPTIONAL STYLE PROFILE`
 
-`BASE STYLE(S) + COMBINATION CAUSALITY + OPTIONAL ATOMIC DETAIL + CINEMATIC LAYER + DIRECTING GRAMMAR + OPTIONAL STYLE PROFILE`
+## Brief-confirmation rule
 
-Examples:
-- `boxing + counter-conversions + grounded-modern-action + impact-inserts`
-- `sanda + clinch-throw-transitions + full-body throw proof`
-- `southern-nanquan vs northern-longfist + range-conversions + grounded-wuxia + wuxia-spatial-chains + new-wave-HK-wuxia profile`
+Clarify only high-impact ambiguity.
+
+Ask when missing information changes:
+- what systems are fighting,
+- whether weapons exist,
+- realism vs wuxia vs fantasy,
+- participant count,
+- who initiates / dominates,
+- core environment,
+- outcome,
+- generation format.
+
+Do not ask for:
+- exact costume fabric,
+- exact lens,
+- minor props,
+- exact cut count,
+unless the user explicitly wants that production specificity.
+
+One compact clarification message is better than a questionnaire.
+
+If the user says “你自己定 / 直接做”, choose minimal reasonable assumptions and proceed.
+
+## Fight-archetype rule
+
+An archetype defines the macro scene engine, not the techniques.
+
+For ~10 seconds:
+- use one primary archetype,
+- roughly three kinetic phases,
+- one meaningful escalation,
+- one readable end-state.
+
+Do not stack multiple archetypes into a short clip.
 
 ## Hard biomechanics rule
 
@@ -67,8 +142,7 @@ Never allow unexplained reset to stance.
 During active close combat:
 - fighters keep chest/head/eyes oriented toward the opponent,
 - 20-60 degree tactical side-on orientation is allowed,
-- back-facing must be caused by a specifically described pivot/spin/impact/evasion and must resolve coherently,
-- do not use vague "moves behind him" language without describing path and opponent response.
+- back-facing must be caused by a specifically described pivot/spin/impact/evasion and must resolve coherently.
 
 ## Zero Idle
 
@@ -78,15 +152,9 @@ Never:
 Use:
 `attack -> deflection/impact/miss -> altered balance/position -> immediate continuation`
 
-Misses, blocks, catches, stumbles, wall contact and landings are choreography states.
-
 ## Film-language rule
 
-The camera does not need to show:
-- both fighters,
-- both faces,
-- full bodies,
-in every shot.
+The camera does not need to show both fighters, both faces or full bodies in every shot.
 
 A valid action shot may isolate:
 - fist approaching lens,
@@ -101,11 +169,9 @@ A valid action shot may isolate:
 - landing feet,
 - eyes snapping toward threat.
 
-But partial/detail shots must inherit a previously understandable spatial relationship and cannot hide mechanics that still need proof.
+Partial/detail shots must inherit a previously understandable spatial relationship.
 
 ## Shot-function rule
-
-Choose framing by what the audience must learn.
 
 - Wide/full-body: route, footwork, kicks, throws, qinggong, multiple fighters.
 - Medium: attack-defense relationship, bridge/clinch, angle.
@@ -138,19 +204,6 @@ When appropriate:
 - every jump has support -> push-off -> trajectory -> landing,
 - no unsupported floating,
 - no unexplained side swap or teleportation.
-
-## Reference routing
-
-For substantial tasks:
-1. read `references/reference-router.md`,
-2. choose one or two base-style files,
-3. optionally choose one pairing file,
-4. optionally choose one combination-pattern file,
-5. optionally choose one cinematic layer,
-6. optionally choose directing files and one style profile,
-7. load atomic/core detail only when necessary.
-
-Do not load sibling files "for inspiration".
 
 ## Output principle
 
