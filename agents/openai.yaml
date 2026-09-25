@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI 打斗动作导演"
+  short_description: "设计武术、格斗、武侠打斗动作与 AI 视频结构化 Prompt"
+  default_prompt: "请根据人物、时长、场景和指定格斗风格，设计一段身体力学连续、镜头可读、适合 AI 视频生成的打斗，并输出结构化 Prompt。"
+
+policy:
+  allow_implicit_invocation: true
