@@ -10,7 +10,10 @@ Determine:
 - armed or unarmed
 - realism level
 - base combat style(s)
+- combination need
 - cinematic layer
+- directing need
+- style-profile need
 - whether fighters use different styles
 - whether aerial / grappling / environment interaction is required
 
@@ -67,11 +70,9 @@ Cinematic files never replace the base style.
 If two fighters use different systems and the tactical mismatch matters, load:
 `pairings/style-vs-style.md`
 
-Do not load it when both fighters share the same style and the user only needs a simple exchange.
-
 ## R4 — combination grammar
 
-If the problem is not “what move exists” but “how should one move causally become the next,” read:
+If the problem is “how should one move causally become the next,” read:
 `combinations/combination-router.md`
 
 Default to at most one combination file for a short fight.
@@ -84,9 +85,35 @@ Typical triggers:
 - missed move / stumble / landing continuation,
 - wuxia environmental movement.
 
-## R5 — atomic mechanics only when needed
+## R5 — directing language
 
-If the selected style tells the director **what tactical action to use** but the exact body mechanics need expansion, read `actions/action-router.md` and load only the exact atomic category needed.
+If the request explicitly concerns:
+- 镜头设计,
+- 景别,
+- POV / 拳脚冲镜头,
+- 撞击特写,
+- 只拍局部身体,
+- 运镜,
+- 遮挡切镜,
+- 环境破坏,
+- 影视级动作拍摄,
+- 长镜头 vs 快切,
+
+read:
+`directing/directing-router.md`
+
+Then load only the 1-2 directing files that solve the current visual problem.
+
+If the user asks for a named filmmaker/choreographer/action-cinema tradition reference, use:
+`directing/style-profiles/style-profile-index.md`
+and then the exact selected profile.
+
+Named profiles are analytical mechanisms only. Final prompt should translate them into abstract camera/staging/rhythm language rather than outputting only “in the style of X”.
+
+## R6 — atomic mechanics only when needed
+
+If the selected style tells the director what tactical action to use but the exact body mechanics need expansion, read:
+`actions/action-router.md`
 
 Examples:
 - boxing pivot detail -> `actions/footwork.md`
@@ -96,7 +123,7 @@ Examples:
 
 Do not load all atomic files automatically.
 
-## R6 — troubleshooting
+## R7 — troubleshooting
 
 | Failure | Reference |
 |---|---|
@@ -104,15 +131,15 @@ Do not load all atomic files automatically.
 | 脚步漂移 / 瞬移 / 落脚错 | `core/biomechanics.md` |
 | 两人一起乱跳 | `core/aerial-motion.md` |
 | 动作停顿 / 回合制 | `core/momentum-continuity.md` |
-| 镜头遮住动作 | `core/action-camera.md` |
+| 镜头遮住动作 | `core/action-camera.md` + relevant `directing/` file |
 
-## R7 — knowledge maintenance
+## R8 — knowledge maintenance
 
-If the user asks to learn from a reference, expand the library, or extract reusable combat assets, read:
+If the user asks to learn from a reference, expand the library, or extract reusable combat/directing assets, read:
 `reference-ingestion-pipeline.md`
 
 Route every candidate to exactly one primary target:
-STYLE / ATOMIC ACTION / COMBINATION / CINEMATIC / PAIRING / CORE.
+STYLE / ATOMIC ACTION / COMBINATION / DIRECTING / STYLE PROFILE / CINEMATIC / PAIRING / CORE.
 
 Never mutate the library merely because a reference was analyzed; maintenance intent must be explicit.
 
@@ -121,24 +148,32 @@ Never mutate the library merely because a reference was analyzed; maintenance in
 For one short fight-generation task, default maximum:
 - 1 router
 - 1-2 base style references
-- 0-1 cinematic layer
 - 0-1 pairing reference
 - 0-1 combination pattern
+- 0-1 cinematic layer
+- 0-2 directing files
+- 0-1 directing style profile
 - 0-2 atomic action files only when mechanics need expansion
 - 0-1 core repair file
 
-Target: 2-6 specialized files, not the whole library.
+Target: usually 3-7 specialized files, not the whole library.
 
 ## Precedence
 
-User explicit choreography > physical continuity > selected base-style mechanics > combination causality > cinematic layer > optional flourish.
+User explicit choreography
+> physical continuity
+> selected base-style mechanics
+> combination causality
+> shot readability / screen continuity
+> cinematic/style-profile transformation
+> optional flourish.
 
-Never force a reference move into a sequence if it breaks the user's action, duration, body state or spatial continuity.
+Never force a visual style choice that hides the movement information needed to understand the fight.
 
 ## Unknown or hybrid style
 
-If a named style is missing:
-1. map it to a movement family by range, stance, tools and tactical goal,
+If a named style/profile is missing:
+1. map it to movement or directing characteristics,
 2. use the closest registered mechanics only as a provisional base,
 3. do not invent historical lineage or claim exact authenticity,
 4. mark it as a library gap for later reference maintenance.
