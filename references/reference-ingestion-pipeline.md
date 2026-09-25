@@ -56,9 +56,27 @@ Every candidate must be classified into exactly one primary target:
 1. **STYLE** — changes a style's tactical identity, preferred range, or style-specific combination grammar.
 2. **ATOMIC ACTION** — reusable biomechanical primitive across styles.
 3. **COMBINATION** — reusable causal chain connecting states across multiple actions.
-4. **CINEMATIC** — camera/stunt/film transformation.
-5. **PAIRING** — style-vs-style interaction pattern.
-6. **CORE** — universal physical or AI-generation constraint.
+4. **DIRECTING** — reusable shot, framing, camera, editing, impact-insert or environment-photography mechanism.
+5. **STYLE PROFILE** — a reusable analytical action-cinema grammar distilled from multiple works/sources; never one exact scene copy.
+6. **CINEMATIC** — stunt/world transformation such as grounded wuxia or qinggong.
+7. **PAIRING** — style-vs-style interaction pattern.
+8. **CORE** — universal physical or AI-generation constraint.
+
+### STYLE vs COMBINATION vs DIRECTING
+
+Use DIRECTING when the reusable asset answers:
+- what should the camera show,
+- which subject/body part is framed,
+- how camera moves,
+- where a cut is motivated,
+- how impact/environment result is photographed.
+
+Use STYLE PROFILE when:
+- the value comes from a recurring body of film/choreography language,
+- multiple sources/works support the abstraction,
+- the result can be translated into general mechanisms.
+
+Do not store a single exact movie shot sequence as a Style Profile.
 
 ### STYLE vs COMBINATION
 
@@ -137,6 +155,26 @@ exit_state:
 camera_proof:
 ai_failure_modes:
 style_constraints:
+confidence:
+decision: ADD|MERGE|EXISTING|HOLD|REJECT
+```
+
+For a reusable directing asset:
+
+```yaml
+candidate_name:
+source_class:
+target_type: DIRECTING
+target_file:
+shot_purpose:
+subject_selection:
+framing:
+camera_position:
+camera_movement:
+action_trigger:
+continuity_requirements:
+best_use:
+ai_failure_modes:
 confidence:
 decision: ADD|MERGE|EXISTING|HOLD|REJECT
 ```
