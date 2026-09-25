@@ -4,9 +4,10 @@ Run silently before final output.
 
 ## QC-0 Routing Integrity
 - Did the task go through reference-router?
-- Were only necessary style/cinematic/core files selected?
+- Were only necessary style / pairing / combination / action / cinematic / core files selected?
 - Was Wuxia used as a cinematic layer rather than replacing base mechanics?
 - Were unrelated sibling styles excluded?
+- Was the reference budget kept minimal?
 
 ## QC-1 Body State Continuity
 For every major beat:
@@ -46,7 +47,17 @@ Fail if any important beat depends on reset or teleportation.
 - Mixed-style fighters have visibly different decision logic.
 - Cinematic layer does not erase base style.
 
-## QC-6 Camera Readability
+## QC-6 Combination Causality
+For every multi-action chain:
+- does action 2 exist because action 1 changed the state?
+- did a miss, block, impact, landing, catch, stumble or positional change create the next opening?
+- is the continuation compatible with current distance and stance?
+- is a generic combination pattern being used instead of copying a frozen combo list?
+- if initiative flips, is there a physical reason?
+
+Fail if choreography is just technique A + technique B + technique C with no causal bridge.
+
+## QC-7 Camera Readability
 - Camera has a purpose.
 - Body-complex moment uses readable framing.
 - Impact point is not hidden.
@@ -55,7 +66,7 @@ Fail if any important beat depends on reset or teleportation.
 - Not every shot is forced to show both fighters.
 - No unnecessary orbiting during complex choreography.
 
-## QC-7 AI Prompt Safety
+## QC-8 AI Prompt Safety
 When relevant:
 - bare hands / gloves / weapons are explicitly controlled,
 - speed is explicitly controlled,
@@ -64,7 +75,7 @@ When relevant:
 - no extra weapon props,
 - no random synchronized jumping.
 
-## QC-8 Duration Density
+## QC-9 Duration Density
 For ~10 seconds:
 - use roughly 3 main kinetic phases,
 - prefer a limited number of readable action nodes,
