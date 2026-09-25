@@ -59,7 +59,19 @@ If two fighters use different systems and the tactical mismatch matters, load:
 
 Do not load it when both fighters share the same style and the user only needs a simple exchange.
 
-### R4 — troubleshooting
+### R4 — atomic mechanics only when needed
+
+If the selected style tells the director **what tactical action to use** but the exact body mechanics need expansion, read `actions/action-router.md` and load only the exact atomic category needed.
+
+Examples:
+- boxing pivot detail -> `actions/footwork.md`
+- Sanda kick catch -> `actions/defense-counter.md`
+- Sanda sweep -> `actions/throws-takedowns.md`
+- Baji shoulder/forearm impact -> `actions/hand-strikes.md`
+
+Do not load all atomic files automatically.
+
+### R5 — troubleshooting
 
 Load core files only for the problem being repaired:
 
@@ -71,6 +83,21 @@ Load core files only for the problem being repaired:
 | 动作停顿 / 回合制 | `core/momentum-continuity.md` |
 | 镜头遮住动作 | `core/action-camera.md` |
 
+### R6 — knowledge maintenance
+
+If the user asks to:
+- 学习这个参考视频,
+- 看看有没有值得沉淀进 Skill,
+- 补充 reference,
+- 扩充某个流派招式库,
+- 从资料中提取可复用动作,
+
+read `reference-ingestion-pipeline.md`.
+
+Route every candidate to exactly one primary target: STYLE / ATOMIC ACTION / CINEMATIC / PAIRING / CORE.
+
+Never mutate the library merely because a reference was analyzed; maintenance intent must be explicit.
+
 ## Maximum normal load budget
 
 For one short fight-generation task, default maximum:
@@ -78,9 +105,10 @@ For one short fight-generation task, default maximum:
 - 1-2 base style references
 - 0-1 cinematic layer
 - 0-1 pairing reference
+- 0-2 atomic action files only when mechanics need expansion
 - 0-1 core repair file
 
-Target: 2-4 specialized files, not the whole library.
+Target: 2-5 specialized files, not the whole library.
 
 ## Precedence
 
