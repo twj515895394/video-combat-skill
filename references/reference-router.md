@@ -135,8 +135,8 @@ Different style names alone do not require Pairing.
 
 ## 7. Combination — optional, not baseline
 
-Zero Idle already handles normal continuity.
-Read `combinations/combination-router.md` only for a central transition problem:
+Zero Idle and the universal stream/relay rules in `SKILL.md` already cover baseline continuity.
+Read `combinations/combination-router.md` only for a central transition problem beyond those defaults:
 - continued pressure after hit/miss/block,
 - defense -> counter,
 - strike -> clinch/throw,
@@ -148,7 +148,7 @@ Default: at most one Combination leaf for a short scene.
 
 ## 8. Directing / Style Profile — optional
 
-Ordinary video prompts do not automatically require the Directing library because `SKILL.md` already contains compact universal shot/tempo rules.
+Ordinary video prompts do not automatically require the Directing library because `SKILL.md` already contains compact universal coverage/shot/tempo rules.
 
 Read `directing/directing-router.md` only for explicit/critical cinematography needs: partial-body framing, POV, attack-to-camera, impact insert, camera movement, occlusion cut, damage photography, editing rhythm or screen-direction design.
 
@@ -183,9 +183,12 @@ Load `composer/contact-impact-composer.md` only when:
 ### Tempo + Shot Composer
 Load `composer/tempo-shot-composer.md` only when:
 - previous output looked like slow turn-taking / stand-and-trade,
-- cinematic pacing and shot variety are a central authoring requirement,
+- action speed is acceptable but coverage still looks like a sports match because both complete fighters remain visible too often,
+- cinematic pacing / shot variety / selective wide-shot usage is a central authoring requirement,
 - the user explicitly wants fast Hong Kong-style screen choreography,
-- the task needs deliberate control of wide/medium/close tempo relationships.
+- the task needs deliberate control of visual-anchor, partial-subject, wide/medium/close or state-change-cut relationships.
+
+Do **not** load extra martial-art references just to repair sports-like camera coverage.
 
 ### Composer budget rule
 Normally load **0-1 Composer leaf**.
@@ -233,15 +236,15 @@ Deduplication should be target-local, normally against only 1-3 nearby leaves.
 - named Style Profile -> normally no generic Hong Kong fallback,
 - `multi-opponent/protagonist-centric-directing.md` -> normally no generic framing leaf,
 - qinggong only for actual elevated movement,
-- Combination only for a specific transition problem,
+- Combination only for a specific transition problem beyond universal continuity rules,
 - Body Pose Composer only when posture detail/repair is central,
 - Contact Impact Composer only when impact authoring is central,
-- Tempo + Shot Composer only when pacing/shot grammar is central,
+- Tempo + Shot Composer for slow pacing **or** sports-like overuse of complete two-fighter coverage,
 - Atomic only for missing mechanic detail,
 - Core only for identified failure/edge case,
 - `composer/contact-impact-composer.md` and `core/contact-impact-physics.md` -> normally choose one,
 - `composer/body-pose-composer.md` and many Atomic leaves -> prefer Composer when the problem spans multiple techniques,
-- `composer/tempo-shot-composer.md` and multiple generic directing rhythm leaves -> prefer Composer when the problem is overall fight pacing,
+- `composer/tempo-shot-composer.md` and multiple generic directing rhythm/framing leaves -> prefer Composer when the problem is overall cinematic coverage/pacing,
 - `contact-impact-physics.md` for force mechanics, `impact-inserts.md` for camera treatment; use both only when both are required,
 - avoid `core/action-camera.md` + multiple detailed Directing leaves by default.
 
@@ -252,6 +255,6 @@ User explicit choreography
 > base-style mechanics
 > optional archetype / multi-opponent spatial logic
 > specific combination causality
-> tempo / shot readability
+> cinematic coverage / tempo / decisive-mechanic readability
 > cinematic / Style Profile transformation
 > flourish.
