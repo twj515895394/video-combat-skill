@@ -1,90 +1,179 @@
-# Combat Brief Confirmation
+# Combat Brief Gate
 
-Use before choreography when missing information would materially change the fight.
+Use **before any routing, reference loading, choreography, shot design or prompt writing**.
 
-The goal is **not** to interrogate the user. Confirm only high-impact unknowns.
+This is a generation gate, not a production questionnaire.
+The goal is to resolve the few facts that can materially change the fight. If a blocking field is unknown, **stop and ask the user before continuing**.
 
-## Core fields
+## 1. Blocking Core — must be resolved
 
-Try to resolve:
+For a normal fight-video prompt, resolve these fields first:
 
-- duration
-- participant count
-- armed / unarmed
-- environment / usable architecture
-- initiator
-- combat style(s)
-- realism level
-- cinematic tone
-- outcome / ending state
-- generation model or output format when relevant
+1. **Duration**
+   - e.g. 5s / 10s / 15s.
 
-## Ask only when material
+2. **Participants / combat relationship**
+   - count,
+   - who is fighting whom,
+   - any identity/color labels needed to track them.
 
-Ask a concise clarification when one of these is genuinely ambiguous and would produce a different choreography:
+3. **Weapon state**
+   - unarmed,
+   - armed and exact weapon class,
+   - mixed if intentionally specified.
 
-### A. Combat identity
+4. **Environment / fight space**
+   - enough to establish usable spatial logic,
+   - e.g. Ming courtyard, alley, staircase, warehouse, forest platform.
+   - Exact dimensions are not required unless important.
+
+5. **Base combat identity**
+   - exact martial art / combat system when the user cares about it,
+   - or an explicit user delegation such as “你自己定 / 按场景选 / 自由发挥”.
+
+6. **Physical / cinematic reality level**
+   - grounded realistic combat,
+   - grounded wuxia,
+   - heightened wuxia / qinggong,
+   - fantasy / supernatural if explicitly wanted.
+
+7. **Fight relationship / ending intent**
+   Resolve enough to know the dramatic direction:
+   - who initiates or whether either may initiate,
+   - evenly matched vs one side pressuring,
+   - ending: unresolved / one side gains advantage / decisive win / escape / interruption,
+   - or explicit delegation to the director.
+
+If any of these seven fields is genuinely unknown and not delegated, **do not generate the final fight prompt yet**.
+
+## 2. Conditional fields — ask only when relevant
+
+These are not universal blockers.
+
+### A. Target generation model / prompt format
+Ask only when model-specific formatting materially changes the prompt.
 Examples:
-- “中国武术” but the intended movement could be Nanquan, Long Fist, Wing Chun, Baji, etc.
-- “格斗” but user may mean boxing, Sanda, Muay Thai, MMA.
+- MiniMax H3,
+- Seedance,
+- Veo,
+- Kling,
+- generic natural-language video prompt.
 
-### B. Realism level
+If the user only asks for a generic prompt, do not block on model name.
+
+### B. Named action-cinema / filmmaker profile
 Examples:
-- grounded fight vs heightened wuxia vs fantasy qinggong.
+- Yuen Woo-ping / 袁和平,
+- Tsui Hark / 徐克,
+- Sammo Hung / 洪金宝.
 
-### C. Weapons
-If the request could plausibly be armed or unarmed and that changes the entire action design.
+A named profile changes choreography/directing treatment, but it is **not a substitute for Base Combat Identity**.
 
-### D. Core relationship
+**Hard rule:**
+`Named Action Style Profile ≠ Base Combat Style`
+
 Examples:
-- who attacks first,
-- who is dominant,
-- evenly matched vs one-sided,
-- 1v1 vs multiple attackers.
+- “袁和平风格” does **not** mean Northern Long Fist.
+- “徐克武侠” does **not** determine Nanquan / Baji / Wing Chun.
+- “洪金宝式动作” does **not** determine boxing / kickboxing / Southern fist.
 
-### E. Space
-If environment interaction is important but location is unknown.
+If the user names only a filmmaker/action profile but gives no martial-art identity and has not delegated that choice, ask.
 
-### F. Output target
-If the user asks for “prompt” but platform/model format materially changes structure.
+### C. Special must-have / must-avoid constraints
+Ask only when ambiguity materially changes composition.
+Examples:
+- must contain qinggong,
+- no aerial movement,
+- must use environment,
+- no face close-ups,
+- protagonist cannot be hit,
+- must end on a throw.
 
-## Do not ask when easy to infer
+## 3. Delegation counts as resolved
 
-Do not block the workflow for:
-- exact costume color unless identity depends on it,
-- small prop choices,
-- minor camera lens choice,
-- exact number of cuts,
-- micro-details that can be designed safely.
+The user may explicitly hand a field to the director.
+Examples:
+- “武术流派你自己定”
+- “谁先攻你安排”
+- “结局你设计”
+- “写实程度按袁和平电影感处理”
 
-Infer and proceed.
+Treat explicit delegation as a resolved field.
+Choose the smallest coherent assumption and do not ask again.
 
-## Confirmation style
+Do **not** silently treat missing information as delegated.
 
-Prefer one compact message containing only the unresolved core points.
+## 4. Broad but sufficient answers are valid
 
-Good:
-“先确认3个核心点：1）纯徒手还是允许兵器；2）偏写实武打、写实武侠还是高幻想轻功；3）红衣是否必须先攻且最终谁占上风？”
+Do not over-question once the blocking intent is clear.
 
-Bad:
-20-question production questionnaire.
+Examples:
 
-## If user already supplied the answer
+“10秒，明代庭院，红蓝两名男子，徒手，南拳对北腿，写实武侠，红衣先攻，最后不分胜负。”
 
-Never ask again.
+This is enough.
+Do not ask:
+- courtyard dimensions,
+- exact robe fabric,
+- lens focal length,
+- exact cut count,
+- exact strike count.
 
-## If user gives a broad but workable brief
+Another valid brief:
+
+“10秒，明代庭院，两名男子徒手，袁和平动作设计，武术流派和谁占上风你自己定，写实武侠。”
+
+This is also enough because the uncertain combat fields were explicitly delegated.
+
+## 5. Compact confirmation format
+
+Ask all unresolved blocking points in **one compact message**.
+Do not drip-feed one question per turn unless the user's answer creates a new material ambiguity.
+
+Preferred format:
+
+“生成前还差3个核心点：
+1）两人的武术流派是什么，还是由我来定？
+2）偏写实武打、写实武侠，还是带明显轻功？
+3）谁先攻、最后谁占上风，还是不分胜负？”
+
+Keep the wording natural to the user's language.
+
+## 6. Do not ask for already-known facts
+
+Never re-ask a field already supplied in the current request or conversation.
 
 Example:
-“10秒，古代武侠，红衣先攻，南拳对北腿，徒手。”
+If the user already said “10秒、明代庭院、红衣蓝衣、徒手、袁和平风格”, do **not** ask duration/environment/weapon state again.
+Only ask the unresolved material fields such as Base Combat Identity, reality level or outcome if they were not delegated.
 
-This is enough to proceed.
-Do not ask:
-- exact courtyard dimensions,
-- exact lens,
-- exact robe fabric,
-unless user requests production-level specificity.
+## 7. Pre-generation status
 
-## If ambiguity remains but user asks to proceed
+Internally classify each blocking field as:
 
-Make the smallest reasonable assumption and state it briefly in the response or internal brief.
+```yaml
+brief_gate:
+  duration: RESOLVED | DELEGATED | UNKNOWN
+  participants: RESOLVED | DELEGATED | UNKNOWN
+  weapons: RESOLVED | DELEGATED | UNKNOWN
+  environment: RESOLVED | DELEGATED | UNKNOWN
+  base_combat_identity: RESOLVED | DELEGATED | UNKNOWN
+  reality_level: RESOLVED | DELEGATED | UNKNOWN
+  fight_relationship_ending: RESOLVED | DELEGATED | UNKNOWN
+```
+
+Proceed only when no blocking field remains `UNKNOWN`.
+
+## 8. Gate behavior
+
+If `UNKNOWN` exists:
+- ask only for the unknown blocking fields,
+- do not build the Load Manifest yet,
+- do not load Style / Cinematic / Directing / Composer leaves,
+- do not draft choreography,
+- do not output a provisional fight prompt.
+
+If all blocking fields are `RESOLVED` or `DELEGATED`:
+- continue to `reference-router.md`,
+- build the Load Manifest,
+- compose the fight.
