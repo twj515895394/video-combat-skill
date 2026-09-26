@@ -17,7 +17,7 @@ cinematic:
 multi_opponent: []
 directing: []
 style_profile:
-composer_protocol:
+composer_protocols: []
 atomic_actions: []
 core_repairs: []
 ```
@@ -148,7 +148,8 @@ Default: at most one Combination leaf for a short scene.
 
 ## 8. Directing / Style Profile — optional
 
-Ordinary video prompts do not automatically require the Directing library.
+Ordinary video prompts do not automatically require the Directing library because `SKILL.md` already contains compact universal shot/tempo rules.
+
 Read `directing/directing-router.md` only for explicit/critical cinematography needs: partial-body framing, POV, attack-to-camera, impact insert, camera movement, occlusion cut, damage photography, editing rhythm or screen-direction design.
 
 Named profile direct map:
@@ -161,29 +162,44 @@ Named profile direct map:
 Read `style-profile-index.md` only when the requested tradition/profile is ambiguous or unmapped.
 Use at most one profile unless the user explicitly asks for comparison/hybridization.
 
-## 9. Composer Protocol — optional detailed authoring layer
+## 9. Composer Protocols — optional detailed authoring layer
 
-The compact force-transfer rule in `SKILL.md` applies to **every** generation and costs no leaf read.
+Compact versions of Pose, Impact and Tempo/Shot protocols already live in `SKILL.md` and apply to every generation with **no leaf read**.
 
+### Body Pose Composer
+Load `composer/body-pose-composer.md` only when:
+- the user explicitly prioritizes technically correct posture / stance / body mechanics,
+- P2/P3 techniques are central and need exact key-pose authoring,
+- previous video shows broken kick / sweep / throw / landing geometry,
+- the task is specifically auditing technique posture.
+
+### Contact Impact Composer
 Load `composer/contact-impact-composer.md` only when:
 - the user explicitly prioritizes hard-hitting / realistic impact / collision feel,
-- the scene contains several important C1-C3 collisions whose force transfer is central,
-- a previous generated video looked like fake contact / pose sparring,
-- the task is specifically repairing receiving-point or impact-weight failures.
+- several important C1-C3 collisions need detailed force-transfer authoring,
+- previous video looked like fake contact / pose sparring,
+- the task is repairing receiving-point / impact-weight failures.
 
-Do not load it merely because a fight contains punches or kicks.
+### Tempo + Shot Composer
+Load `composer/tempo-shot-composer.md` only when:
+- previous output looked like slow turn-taking / stand-and-trade,
+- cinematic pacing and shot variety are a central authoring requirement,
+- the user explicitly wants fast Hong Kong-style screen choreography,
+- the task needs deliberate control of wide/medium/close tempo relationships.
 
-Normally choose **one** of these for impact problems:
-- `composer/contact-impact-composer.md` = authoring/composition protocol,
-- `core/contact-impact-physics.md` = focused physics diagnostic/reference.
+### Composer budget rule
+Normally load **0-1 Composer leaf**.
+Load 2 only when the task explicitly combines two independent failures, e.g. broken body geometry + fake impact, or fake impact + slow stand-and-trade pacing.
 
-Do not load both unless explicitly auditing the impact system itself.
+Prefer Composer over stacking several lower-level references when it directly addresses the authoring failure.
 
 ## 10. Atomic Action — optional
 
 Read `actions/action-router.md` only when a specific move needs more biomechanical detail than its Style leaf already provides.
 
 Do not load Atomic Action just because a move name appears in the Style reference.
+
+When exact posture is the problem across several complex moves, prefer `composer/body-pose-composer.md` over loading many Atomic leaves.
 
 ## 11. Core repair — conditional
 
@@ -195,6 +211,9 @@ Core files are diagnostic/edge-case references, not default context.
 - synchronized hopping / aerial error -> `core/aerial-motion.md`
 - turn-taking / reset -> `core/momentum-continuity.md`
 - generic camera readability -> `core/action-camera.md`
+
+For authoring a new prompt, prefer the relevant Composer leaf.
+For diagnosing why a previous generation failed, prefer the focused Core repair leaf.
 
 `contact-impact-physics.md` and `directing/impact-inserts.md` solve different problems:
 - Contact Impact Physics = **body force transfer / receiving-point mechanics**.
@@ -215,20 +234,24 @@ Deduplication should be target-local, normally against only 1-3 nearby leaves.
 - `multi-opponent/protagonist-centric-directing.md` -> normally no generic framing leaf,
 - qinggong only for actual elevated movement,
 - Combination only for a specific transition problem,
-- Composer Protocol only when impact authoring is a central need,
+- Body Pose Composer only when posture detail/repair is central,
+- Contact Impact Composer only when impact authoring is central,
+- Tempo + Shot Composer only when pacing/shot grammar is central,
 - Atomic only for missing mechanic detail,
 - Core only for identified failure/edge case,
 - `composer/contact-impact-composer.md` and `core/contact-impact-physics.md` -> normally choose one,
+- `composer/body-pose-composer.md` and many Atomic leaves -> prefer Composer when the problem spans multiple techniques,
+- `composer/tempo-shot-composer.md` and multiple generic directing rhythm leaves -> prefer Composer when the problem is overall fight pacing,
 - `contact-impact-physics.md` for force mechanics, `impact-inserts.md` for camera treatment; use both only when both are required,
 - avoid `core/action-camera.md` + multiple detailed Directing leaves by default.
 
 ## Precedence
 
 User explicit choreography
-> physical continuity and force transfer
+> physical continuity, body-pose correctness and force transfer
 > base-style mechanics
 > optional archetype / multi-opponent spatial logic
 > specific combination causality
-> shot readability
+> tempo / shot readability
 > cinematic / Style Profile transformation
 > flourish.
