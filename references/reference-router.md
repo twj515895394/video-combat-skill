@@ -172,9 +172,15 @@ Core files are diagnostic/edge-case references, not default context.
 
 - back-facing / orientation -> `core/combat-facing.md`
 - feet / teleport / landing -> `core/biomechanics.md`
+- fake / weightless hits, blocks, collisions, missing receiving point -> `core/contact-impact-physics.md`
 - synchronized hopping / aerial error -> `core/aerial-motion.md`
 - turn-taking / reset -> `core/momentum-continuity.md`
 - generic camera readability -> `core/action-camera.md`
+
+`contact-impact-physics.md` and `directing/impact-inserts.md` solve different problems:
+- Contact Impact Physics = **body force transfer / receiving-point mechanics**.
+- Impact Inserts = **how the camera photographs selected contacts**.
+Do not load both unless the task needs both physical repair and dedicated impact cinematography.
 
 For a specific cinematography failure, prefer the exact `directing/` leaf instead of loading generic camera core plus several directing files.
 For a one-vs-many failure, prefer the exact `multi-opponent/` leaf.
@@ -192,12 +198,13 @@ Deduplication should be target-local, normally against only 1-3 nearby leaves.
 - Combination only for a specific transition problem,
 - Atomic only for missing mechanic detail,
 - Core only for identified failure/edge case,
+- `contact-impact-physics.md` for force mechanics, `impact-inserts.md` for camera treatment; use both only when both are required,
 - avoid `core/action-camera.md` + multiple detailed Directing leaves by default.
 
 ## Precedence
 
 User explicit choreography
-> physical continuity
+> physical continuity and force transfer
 > base-style mechanics
 > optional archetype / multi-opponent spatial logic
 > specific combination causality
