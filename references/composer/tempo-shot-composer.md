@@ -4,7 +4,7 @@ This protocol controls how fight tempo is expressed through cinematography.
 
 Purpose: prevent AI fight videos from becoming slow turn-taking two-shots where both fighters remain fully visible and trade one move at a time.
 
-The compact mandatory rules live in `SKILL.md`. Load this detailed file only when cinematic pacing, shot variety, turn-taking failure, or stand-and-trade staging is a central problem.
+The compact mandatory rules live in `SKILL.md`. Load this detailed file only when cinematic pacing, shot variety, turn-taking failure, sports-like coverage, or stand-and-trade staging is a central problem.
 
 ## 1. Core principle
 
@@ -18,11 +18,43 @@ If the audience needs more time to read one important event, change the shot:
 - isolate the receiving point,
 - isolate the support foot,
 - isolate the defender reaction,
+- isolate the control relationship,
 - isolate the environment result.
 
 Do not solve readability by making two fully visible fighters perform slow, turn-based techniques.
 
-## 2. Two-fighter full-body tempo rule
+## 2. Cinematic coverage hierarchy
+
+This skill targets **cinematic fight coverage**, not sports-broadcast completeness.
+
+Treat wide / medium-wide full-body two-shots as **spatial state shots**.
+Use them when the audience needs to understand:
+- left/right relation,
+- distance and attack lane,
+- major route or height change,
+- environment geometry,
+- complex kick / throw / qinggong trajectory,
+- multi-person distribution.
+
+After geography is established, do not keep both complete fighters visible by default.
+Prefer whichever subject reveals the most interesting information now:
+- attacker-only initiation,
+- defender-only evasion/recovery,
+- foreground limb threat,
+- torso/hip mechanics,
+- contact point,
+- wrist/arm control,
+- support-foot or landing detail,
+- receiving-body reaction,
+- environment consequence,
+- result-only shot.
+
+Return to a wider relation shot only when geography materially changes or a full-body mechanic genuinely needs proof.
+
+**Proof the decisive mechanic, not necessarily the whole body.**
+Correct full-body mechanics still exist internally even when the camera shows only the body region needed for the audience to understand the decisive action.
+
+## 3. Two-fighter full-body tempo rule
 
 When both fighters are substantially visible in a wide / medium-wide / full-body two-shot:
 
@@ -41,7 +73,7 @@ Bad:
 Better:
 `A drives the straight -> B's forearm collision redirects it -> the redirect already loads B's counter -> A's recovery foot becomes the next evasive step.`
 
-## 3. Detail-shot emphasis rule
+## 4. Detail-shot emphasis rule
 
 If one beat should feel slower, heavier or more readable, use a tighter shot instead of slowing the whole duel.
 
@@ -60,7 +92,7 @@ Suitable subjects:
 
 The detail shot may momentarily simplify perceived time because the frame contains less information, while the action itself remains real-time unless explicit slow motion is requested.
 
-## 4. Subject isolation is encouraged
+## 5. Subject isolation is encouraged
 
 Not every shot should show both fighters.
 
@@ -90,18 +122,45 @@ Show only:
 - receiving surface,
 - local body/material response.
 
+### Control-only shot
+Show only the body regions needed to prove:
+- wrist capture,
+- arm drag,
+- grip transfer,
+- frame,
+- clinch connection,
+- local rotational control.
+
 ### Result-only shot
 Show:
 - receiver stumbling,
 - boot sliding,
 - body hitting pillar,
 - hand catching railing,
+- opponent overrotating after redirection,
 - debris falling,
-while attacker is partly or fully out of frame.
+while attacker/controller is partly or fully out of frame.
 
 The absent fighter must remain spatially inferable from established direction.
 
-## 5. Attack-right overlap
+## 6. Visual Anchor Fighter
+
+During a dense exchange, one fighter may remain the primary readable visual anchor while the opponent is fragmented by framing.
+
+Useful composition:
+- anchor fighter remains readable in mid-ground,
+- opponent appears through foreground limb, partial body, frame-edge entry or short full-body bursts,
+- camera is stable enough to read the anchor fighter's continuous defense / redirection / pressure response.
+
+Use for:
+- barrage defense,
+- Taijiquan / Baguazhang redirection,
+- one-vs-many pressure,
+- pursuit where one fighter is the audience's orientation reference.
+
+The anchor is not permanent. Transfer the visual anchor when initiative or the physical relationship meaningfully changes.
+
+## 7. Attack-right overlap
 
 Cinematic continuity should avoid strict alternating turns.
 
@@ -116,30 +175,87 @@ Useful overlap patterns:
 
 This creates speed without requiring impossible simultaneous unrelated motion.
 
-## 6. Shot-role sequence
+## 8. Attack Stream / Defense Stream
+
+For a dense 2-5 second passage, do not compose only as isolated named moves.
+Allow one side to produce a continuous attack stream while the other produces a continuous defense/redirection stream.
+
+Attack stream:
+- next threat may begin before prior limb fully returns if anatomy/balance permit,
+- attack direction/height may vary,
+- initiative remains with attacker until real failure, capture, redirection or displacement flips it.
+
+Defense stream:
+- head/torso may leave the line before hand contact,
+- one hand may continue guiding instead of retracting,
+- the other hand/forearm may already prepare for the next threat,
+- foot/hip/torso states continuously evolve rather than returning to neutral.
+
+This is not simultaneous random flailing. Each stream still follows causal biomechanics.
+
+## 9. Contact Relay / No Guard Reset
+
+For styles/ranges that support continuous hand contact:
+
+`current contact exit -> next contact start`
+
+Avoid:
+`parry -> hand returns to guard -> next parry -> hand returns to guard`.
+
+Prefer:
+`left hand guides wrist outside -> stays on that line while torso turns -> right forearm receives next attack -> left hand transitions into control/frame`.
+
+Use only when the selected style supports contact continuity. Do not force this grammar into tactics that require disengagement/reset.
+
+## 10. State-Change Cut
+
+A strong cinematic cut trigger is a change in the **physical relationship category** between fighters.
+
+Examples:
+- free striking -> wrist/arm control,
+- striking -> clinch,
+- clinch -> throw,
+- standing exchange -> wall/railing pin,
+- grounded exchange -> aerial displacement,
+- pressure -> receiver-only recovery,
+- free movement -> environment-supported control.
+
+Pattern:
+`current relationship -> state change occurs -> CUT to the new decisive mechanic -> CUT/continue to its result`.
+
+Example:
+`fast striking exchange -> wrist capture -> cut to hands/wrist/forearm control -> result-only shot of opponent being rotated/off-balanced`.
+
+Do not cut after every technique. Cut when the audience now needs a different kind of information.
+
+## 11. Shot-role sequence
 
 A cinematic exchange can move through roles such as:
 
-`SPATIAL ANCHOR -> ATTACK INITIATION -> CONTACT DETAIL -> RESULT / RECOVERY -> RE-ESTABLISH`
+`SPATIAL ANCHOR -> ATTACK INITIATION -> CONTACT / CONTROL DETAIL -> RESULT / RECOVERY -> RE-ESTABLISH ONLY IF NEEDED`
 
 But this is not a mandatory five-shot recipe.
 Skip roles that add no information.
 
 The important rule is that each new shot shows **new information**.
 
-## 7. Tempo by framing
+## 12. Tempo by framing
 
 ### Wide / full-body two-shot
 Primary use:
 - route,
 - style contrast,
-- kicks,
+- major kicks,
 - throws,
 - footwork,
-- rapid continuous exchange.
+- qinggong,
+- rapid continuous exchange when geography itself is the spectacle.
 
 Tempo expectation:
 **fast / continuous**.
+
+Coverage expectation:
+**selective, not dominant**.
 
 ### Medium two-subject shot
 Primary use:
@@ -162,17 +278,18 @@ Primary use:
 Tempo expectation:
 may briefly hold attention on one action phase without making the whole fight slow.
 
-### Contact close-up / extreme close-up
+### Contact/control close-up
 Primary use:
 - impact,
 - grip,
+- wrist/arm control,
 - foot plant,
 - local material/body deformation.
 
 Tempo expectation:
 perceptually emphasized; actual slow motion only if explicitly requested.
 
-## 8. Real slow motion
+## 13. Real slow motion
 
 Default: **no slow motion**.
 
@@ -185,13 +302,14 @@ If slow motion is explicitly requested, prefer using it for:
 
 Avoid slowing an entire wide two-person exchange unless the user explicitly wants stylized slow-motion choreography.
 
-## 9. Cut on action
+## 14. Cut on action
 
 Good cut points:
 - fist crossing foreground,
 - kick near lens,
 - sleeve wipe,
 - forearm collision,
+- wrist capture,
 - foot landing,
 - shoulder hitting pillar,
 - body passing behind column,
@@ -204,7 +322,7 @@ The next shot inherits:
 - momentum,
 - opponent relation.
 
-## 10. No static master-shot dependency
+## 15. No static master-shot dependency
 
 A master wide shot is an anchor, not the entire scene.
 
@@ -213,9 +331,10 @@ Reject a sequence where:
 - camera remains frontally perpendicular to both fighters,
 - attacks alternate cleanly one by one,
 - every action returns to neutral spacing,
-- the only cinematic variation is zooming the same two-shot.
+- the only cinematic variation is zooming the same two-shot,
+- the edit repeatedly returns to wide/full-body coverage with no new geography to explain.
 
-## 11. Camera motion and tempo
+## 16. Camera motion and tempo
 
 Use camera movement to follow dominant displacement, not to create fake speed.
 
@@ -229,14 +348,35 @@ Use camera movement to follow dominant displacement, not to create fake speed.
 Complex body action -> simpler camera.
 Simple trajectory -> more expressive camera allowed.
 
-## 12. AI-video prompt wording
+A relatively stable camera plus fast foreground action can create stronger perceived speed than constant camera shake.
+
+## 17. Stable Background / Fast Foreground Contrast
+
+Use a relatively stable or orderly background when useful to magnify foreground motion.
+
+Composition:
+- background remains visually coherent,
+- foreground limb/body moves rapidly,
+- readable anchor fighter occupies mid-ground.
+
+This creates motion contrast without needing violent camera shake.
+
+Useful for:
+- kick barrages,
+- repeated punches entering frame,
+- fast defense/redirection,
+- crowd/guard-lined spaces where background provides reference.
+
+## 18. AI-video prompt wording
 
 Prefer concrete shot-language such as:
 - `the camera stays low on the support foot as the heel pivots`,
 - `cut tight to the forearm-shin collision`,
 - `the attacker fills most of frame while the defender is only a shoulder edge`,
 - `cut to the receiver's boot skidding across stone`,
-- `return to a wide two-shot only after the spatial relationship changes`.
+- `the defender remains the visual anchor while attacking legs enter rapidly from the left foreground`,
+- `cut from free striking to a wrist-control close-up when the grip is established`,
+- `do not return to a wide two-shot unless the spatial relationship materially changes`.
 
 Avoid vague:
 - `cinematic camera`,
@@ -244,21 +384,24 @@ Avoid vague:
 - `fast editing`,
 without specifying what information each shot reveals.
 
-## 13. QC failure modes
+## 19. QC failure modes
 
 Reject / repair:
 - slow turn-taking in full-body two-shot,
 - both fighters waiting for each other,
 - whole fight shown from one static master angle,
 - every shot containing both faces and full bodies,
+- repeated returns to a full-body master without a geography reason,
 - close-up with no established spatial relation,
 - fake slow motion caused by under-choreographed movement,
 - cutting to a new angle but repeating the same information,
 - detail shot that breaks attack direction,
 - attacker disappearing spatially after a defender-only reaction shot,
-- high-speed camera orbit used to compensate for slow body choreography.
+- high-speed camera orbit used to compensate for slow body choreography,
+- reset-to-guard after every hand contact,
+- cutting after every named technique instead of when information/state changes.
 
-## 14. Asymmetric Shot Duration
+## 20. Asymmetric Shot Duration
 
 Do **not** divide a 10-second fight into equal-length shots by default.
 
@@ -266,7 +409,7 @@ Shot duration follows the information task, not a metronome.
 
 A valid short fight may contain:
 - one 2.5-4 second continuous high-speed exchange,
-- one 0.3-0.8 second impact/result insert,
+- one 0.3-0.8 second impact/control/result insert,
 - one 1-2 second displacement / throw / environment event,
 - several very short 0.2-0.6 second detail or reaction shots near escalation.
 
@@ -278,7 +421,7 @@ Reject:
 - cutting every second only because the clip is 10 seconds,
 - shortening a coherent long exchange merely to create fake cinematic variety.
 
-## 15. Information-Driven Cutting
+## 21. Information-Driven Cutting
 
 Cut when the audience's information requirement changes.
 
@@ -286,6 +429,7 @@ Useful information changes:
 - spatial relationship -> immediate threat,
 - threat -> exact contact,
 - contact -> receiving-body result,
+- free striking -> local control,
 - footwork route -> hand/limb detail,
 - grounded exchange -> vertical displacement,
 - body action -> environment consequence,
@@ -301,7 +445,7 @@ Internal question before every cut:
 
 If the answer is “none,” keep the current shot.
 
-## 16. Long-Take Density Rule
+## 22. Long-Take Density Rule
 
 A continuous 2-4 second shot should not become slow just because it is long.
 
