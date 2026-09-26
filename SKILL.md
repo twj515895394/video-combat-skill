@@ -14,11 +14,10 @@ Design body mechanics first, macro fight logic second, cinematography third.
 3. Read `references/reference-router.md`.
 4. Build the complete internal Load Manifest **before** specialized leaf reads.
 5. Load only exact references authorized by the router and within its hard budget.
-6. Build choreography + spatial ledger.
-7. For every meaningful contact, internally resolve the mandatory Impact Packet before writing the final action prose.
-8. Add cinematography only after physical continuity and force transfer are valid.
-9. Run compact `references/qc-gates.md`; load its specialized QC only when that module is active.
-10. Output the user's requested format.
+6. Build choreography + body-pose keyframes + spatial ledger.
+7. Add cinematography only after physical continuity is valid.
+8. Run compact `references/qc-gates.md`; load its specialized QC only when that module is active.
+9. Output the user's requested format.
 
 ## Runtime loading rules
 
@@ -41,6 +40,52 @@ Design body mechanics first, macro fight logic second, cinematography third.
 `Starting State -> Initiating Limb -> Motion Path -> Defensive Response -> Contact/Miss -> Physical Result -> Exit State`
 
 The exit state must physically support the next beat without reset.
+
+### Mandatory internal Pose Packet
+A named technique is not enough. Before writing an important action, internally resolve the body posture needed to perform it correctly.
+
+For standard/complex actions, track:
+
+`support base -> weight distribution -> feet orientation -> knees -> pelvis/hips -> torso -> shoulders/elbows/hands -> head/gaze -> center of mass -> action path -> recovery/exit`
+
+For complex techniques use key poses:
+
+`START -> LOAD / CHAMBER -> CONTACT / PEAK -> RECOVERY / LANDING -> EXIT`
+
+Do not print this schema unless the user asks for technical diagnostics. Compress it into clear natural-language movement description.
+
+#### Pose detail levels
+
+**P0 — simple hand/guide action**
+Examples: light parry, wrist guide, probing jab.
+Need only stance/facing + limb path + immediate exit.
+
+**P1 — standard power action**
+Examples: straight punch, hook, palm, elbow, front kick.
+Need support base + hip/torso contribution + limb path + contact posture + recovery.
+
+**P2 — complex lower-body / rotational action**
+Examples: side kick, round kick, low sweep, spinning technique.
+Must establish start, chamber/load, support-foot/hip organization, peak/contact and landing/recovery.
+
+**P3 — throw / takedown / aerial action**
+Must establish entry, connection/control or push-off, off-balance/trajectory, execution peak, landing and final relative orientation.
+
+### Body-pose invariants — mandatory
+
+- Every major force-producing action has a readable support base.
+- Large hip rotation needs a plausible support-foot pivot, heel release, stance adjustment or equivalent freedom of the hip.
+- Supporting knee should broadly track the support-foot/load direction; avoid unexplained inward collapse or hyperextension.
+- Hips/pelvis organize the force path; limbs do not move as detached appendages.
+- Torso rotation/lean must remain compatible with the feet, pelvis and center of mass.
+- Shoulder/elbow/wrist geometry must stay anatomically connected to the strike path.
+- The non-striking hand has a plausible guard, balance or control role.
+- Head/gaze remains opponent-aware except for a brief explicitly described rotational phase.
+- Do not force chest-front orientation when a technique mechanically requires side-on hip rotation; preserve opponent awareness through head/gaze and attack line.
+- One-leg actions need a clear support leg and compensating body position.
+- A landing/recovery must restore a usable base before another high-force action.
+
+Style references may vary stance width, guard, torso angle, chamber height, weight bias and recovery, but they should not violate basic anatomy or balance.
 
 ### Mandatory internal Impact Packet
 Before writing every meaningful C1-C3 contact, internally resolve:
@@ -96,25 +141,6 @@ A meaningful hit, block or body collision is not complete at the word `hit`.
 For every **solid contact**, describe at least:
 `striking surface -> exact receiving point -> force direction -> local compression/deflection -> posture/balance consequence -> continuation`
 
-Examples of receiving points:
-- upper sternum,
-- lower ribs,
-- shoulder line,
-- forearm,
-- shin,
-- outer thigh,
-- hip,
-- wall / pillar / railing.
-
-Examples of visible force transfer:
-- robe fabric compresses at the contact point,
-- chest/shoulder line jolts or folds,
-- torso rotates toward the struck side,
-- support heel lifts,
-- rear foot slides or catches one recovery step,
-- one knee bends to absorb impact,
-- hand posts against wall/ground/railing to stop loss of balance.
-
 The attacker must also show contact physics: deceleration, recoil, redirected limb path or body follow-through.
 
 For a **block/check**, show actual collision and line change; do not write a weightless `clean block`.
@@ -151,11 +177,11 @@ Match the reaction to contact geometry:
 Do **not** reduce action count merely because the sequence is fast.
 
 Instead vary description density:
-- C0 minor contact: concise,
-- C1/C2 important collision: enough detail to show force transfer,
-- C3 signature impact: full chain.
+- P0/C0 minor action/contact: concise,
+- P1/C1/C2 important action/collision: enough posture and force detail to remain readable,
+- P2/P3/C3 complex/signature action: explicit key poses and full physical chain.
 
-Fast Hong Kong-style choreography may contain many actions as long as the important contacts remain distinct, consequential and causally connected.
+Fast Hong Kong-style choreography may contain many actions as long as important techniques have correct body organization and important contacts remain distinct, consequential and causally connected.
 
 ### Combat-facing
 Active fighters remain oriented toward the immediate threat. Temporary back-facing requires a described pivot/spin/impact/evasion and coherent recovery.
@@ -185,13 +211,20 @@ Use Pairing only when different systems create a meaningful tactical conflict.
 ### Combination
 Baseline continuity is already provided by Zero Idle. Load Combination only for a specific transition problem.
 
-### Contact / Impact Composer
-The compact Impact Packet above is always active and does not require another file read.
-
-Load `references/composer/contact-impact-composer.md` only when impact quality itself is a central requirement or a prior output failed because hits/blocks/collisions looked fake.
-
 ### Atomic Action
 Load only when one move needs more biomechanical detail than its Style reference provides.
+
+### Body Pose Composer
+The compact Pose Packet above applies to every generation without a leaf read.
+Load `references/composer/body-pose-composer.md` only when:
+- the user explicitly prioritizes technically correct body posture,
+- P2/P3 actions are central and need exact key-pose authoring,
+- a previous generation shows broken kick/sweep/throw/landing geometry,
+- the task is specifically auditing movement posture.
+
+### Contact Impact Composer
+The compact Impact Packet above applies to every generation without a leaf read.
+Load `references/composer/contact-impact-composer.md` only when hard-hitting / realistic impact is a central authoring need or previous output looked like fake contact.
 
 ### Cinematic
 Load only for an actual world/movement transformation. Wuxia does not automatically imply Qinggong.
@@ -205,7 +238,7 @@ Use at most one named action-cinema profile unless the user explicitly requests 
 ### Core repair
 Core files are diagnostic, not default context. Load only the failed domain.
 
-If hits/blocks/collisions look fake, weightless or like actors touching each other, normally load **either** `references/composer/contact-impact-composer.md` for re-authoring or `references/core/contact-impact-physics.md` for focused physical diagnosis, not both.
+If hits/blocks/collisions look fake, weightless or like actors touching each other, load `references/core/contact-impact-physics.md`.
 
 ## Universal shot-function rules
 
@@ -231,8 +264,7 @@ When relevant:
 - no automatic pose reset after impact,
 - no impact reaction before visual contact,
 - no limbs passing through the receiving body,
-- no weightless `touch = reaction` contact,
-- no identical receiver reaction reused for every strike.
+- no impossible joint orientation or detached-limb motion.
 
 ## Output principle
 
