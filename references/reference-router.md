@@ -148,9 +148,9 @@ Default: at most one Combination leaf for a short scene.
 
 ## 8. Directing / Style Profile — optional
 
-Ordinary video prompts do not automatically require the Directing library because `SKILL.md` already contains compact universal coverage/shot/tempo rules.
+Ordinary video prompts do not automatically require the Directing library because `SKILL.md` already contains compact universal coverage/shot/tempo rules and `qc-gates.md` contains compact face/gaze checks.
 
-Read `directing/directing-router.md` only for explicit/critical cinematography needs: partial-body framing, POV, attack-to-camera, impact insert, camera movement, occlusion cut, damage photography, editing rhythm or screen-direction design.
+Read `directing/directing-router.md` only for explicit/critical cinematography needs: partial-body framing, POV, attack-to-camera, impact insert, camera movement, occlusion cut, damage photography, editing rhythm, screen-direction design, or face/performance framing.
 
 Named profile direct map:
 - 徐克 / Tsui Hark / 新派港式武侠 -> `directing/style-profiles/tsui-hark-new-wave-wuxia.md`
@@ -164,7 +164,7 @@ Use at most one profile unless the user explicitly asks for comparison/hybridiza
 
 ## 9. Composer Protocols — optional detailed authoring layer
 
-Compact versions of Pose, Impact and Tempo/Shot protocols already live in `SKILL.md` and apply to every generation with **no leaf read**.
+Compact Pose, Impact and Tempo/Shot rules already live in `SKILL.md`. Basic face/gaze correctness is enforced by `qc-gates.md`. These defaults apply with **no leaf read**.
 
 ### Body Pose Composer
 Load `composer/body-pose-composer.md` only when:
@@ -190,9 +190,18 @@ Load `composer/tempo-shot-composer.md` only when:
 
 Do **not** load extra martial-art references just to repair sports-like camera coverage.
 
+### Combat Expression Composer
+Load `composer/combat-expression-composer.md` only when:
+- close / medium-close facial coverage is a major part of the scene,
+- the user explicitly asks for realistic fight expressions / gaze / breathing,
+- previous output shows blank mannequin faces, beauty-pose calm, wrong gaze direction or repeated identical grimaces,
+- the task is specifically repairing facial acting continuity across attack / impact / recovery shots.
+
+Do **not** load it merely because faces happen to be visible in one ordinary shot; core QC already enforces basic expression/gaze correctness.
+
 ### Composer budget rule
 Normally load **0-1 Composer leaf**.
-Load 2 only when the task explicitly combines two independent failures, e.g. broken body geometry + fake impact, or fake impact + slow stand-and-trade pacing.
+Load 2 only when the task explicitly combines two independent failures, e.g. broken body geometry + fake impact, fake impact + slow sports-like coverage, or sports-like coverage + repeated blank close-up faces.
 
 Prefer Composer over stacking several lower-level references when it directly addresses the authoring failure.
 
@@ -240,11 +249,13 @@ Deduplication should be target-local, normally against only 1-3 nearby leaves.
 - Body Pose Composer only when posture detail/repair is central,
 - Contact Impact Composer only when impact authoring is central,
 - Tempo + Shot Composer for slow pacing **or** sports-like overuse of complete two-fighter coverage,
+- Combat Expression Composer only when facial acting is a central/failed domain; do not load it for every visible face,
 - Atomic only for missing mechanic detail,
 - Core only for identified failure/edge case,
 - `composer/contact-impact-composer.md` and `core/contact-impact-physics.md` -> normally choose one,
 - `composer/body-pose-composer.md` and many Atomic leaves -> prefer Composer when the problem spans multiple techniques,
 - `composer/tempo-shot-composer.md` and multiple generic directing rhythm/framing leaves -> prefer Composer when the problem is overall cinematic coverage/pacing,
+- `composer/combat-expression-composer.md` and generic framing reference -> use both only when both facial acting and shot-selection detail are independently central,
 - `contact-impact-physics.md` for force mechanics, `impact-inserts.md` for camera treatment; use both only when both are required,
 - avoid `core/action-camera.md` + multiple detailed Directing leaves by default.
 
@@ -256,5 +267,6 @@ User explicit choreography
 > optional archetype / multi-opponent spatial logic
 > specific combination causality
 > cinematic coverage / tempo / decisive-mechanic readability
+> face/gaze acting when visually readable
 > cinematic / Style Profile transformation
 > flourish.
