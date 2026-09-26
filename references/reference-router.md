@@ -17,6 +17,7 @@ cinematic:
 multi_opponent: []
 directing: []
 style_profile:
+composer_protocol:
 atomic_actions: []
 core_repairs: []
 ```
@@ -160,13 +161,31 @@ Named profile direct map:
 Read `style-profile-index.md` only when the requested tradition/profile is ambiguous or unmapped.
 Use at most one profile unless the user explicitly asks for comparison/hybridization.
 
-## 9. Atomic Action — optional
+## 9. Composer Protocol — optional detailed authoring layer
+
+The compact force-transfer rule in `SKILL.md` applies to **every** generation and costs no leaf read.
+
+Load `composer/contact-impact-composer.md` only when:
+- the user explicitly prioritizes hard-hitting / realistic impact / collision feel,
+- the scene contains several important C1-C3 collisions whose force transfer is central,
+- a previous generated video looked like fake contact / pose sparring,
+- the task is specifically repairing receiving-point or impact-weight failures.
+
+Do not load it merely because a fight contains punches or kicks.
+
+Normally choose **one** of these for impact problems:
+- `composer/contact-impact-composer.md` = authoring/composition protocol,
+- `core/contact-impact-physics.md` = focused physics diagnostic/reference.
+
+Do not load both unless explicitly auditing the impact system itself.
+
+## 10. Atomic Action — optional
 
 Read `actions/action-router.md` only when a specific move needs more biomechanical detail than its Style leaf already provides.
 
 Do not load Atomic Action just because a move name appears in the Style reference.
 
-## 10. Core repair — conditional
+## 11. Core repair — conditional
 
 Core files are diagnostic/edge-case references, not default context.
 
@@ -185,19 +204,21 @@ Do not load both unless the task needs both physical repair and dedicated impact
 For a specific cinematography failure, prefer the exact `directing/` leaf instead of loading generic camera core plus several directing files.
 For a one-vs-many failure, prefer the exact `multi-opponent/` leaf.
 
-## 11. Maintenance mode
+## 12. Maintenance mode
 
 Read `reference-ingestion-pipeline.md` only when the user explicitly asks to learn from a source, expand the library or maintain references.
 Deduplication should be target-local, normally against only 1-3 nearby leaves.
 
-## 12. Mutual-exclusion reminders
+## 13. Mutual-exclusion reminders
 
 - named Style Profile -> normally no generic Hong Kong fallback,
 - `multi-opponent/protagonist-centric-directing.md` -> normally no generic framing leaf,
 - qinggong only for actual elevated movement,
 - Combination only for a specific transition problem,
+- Composer Protocol only when impact authoring is a central need,
 - Atomic only for missing mechanic detail,
 - Core only for identified failure/edge case,
+- `composer/contact-impact-composer.md` and `core/contact-impact-physics.md` -> normally choose one,
 - `contact-impact-physics.md` for force mechanics, `impact-inserts.md` for camera treatment; use both only when both are required,
 - avoid `core/action-camera.md` + multiple detailed Directing leaves by default.
 
