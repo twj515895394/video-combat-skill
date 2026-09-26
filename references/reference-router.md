@@ -2,77 +2,67 @@
 
 Selective loading is mandatory. This repository is designed to grow large; broad scanning is a failure mode.
 
+Before any specialized load, read and obey:
+`routing-contract.md`
+
 ## R0 — resolve brief confidence
 
-Before specialized routing, determine whether the request is sufficiently defined.
-
-If a missing detail would materially change:
-- combat identity,
-- realism / wuxia level,
-- weapons,
-- participant count,
-- initiator / dominance,
-- core environment,
-- outcome,
-- target AI-video format,
-
-read `brief-confirmation.md` and ask only the minimum unresolved core questions.
+If a missing detail would materially change combat identity, realism/wuxia level, weapons, participant count, initiator/dominance, core environment, outcome or target AI-video format, read `brief-confirmation.md` and ask only the minimum unresolved core questions.
 
 Do not ask again for information already supplied.
 Do not ask for minor details that can be inferred safely.
 
-## R1 — classify the task
+## R1 — classify, then build the Load Manifest
 
-Determine:
-- task: design / prompt / repair / analyze / reference-ingest
+Classify:
+- task mode: generation / repair / analysis / reference-ingest
 - duration
-- armed or unarmed
+- participant structure: 1v1 / one-vs-many
+- armed / unarmed
 - realism level
-- base combat style(s)
-- fight-scene archetype need
-- multi-opponent need
-- combination need
-- cinematic layer
-- directing need
-- style-profile need
-- whether fighters use different styles
-- whether aerial / grappling / environment interaction is required
+- base style(s)
+- whether a macro archetype is actually needed
+- whether a specific transition problem needs Combination
+- whether elevated wuxia movement needs Qinggong
+- whether explicit cinematography needs Directing
+- whether a named action-cinema profile is requested
 
-## R2 — choose fight-scene archetype
+Build the complete internal Load Manifest **before reading leaf references**.
+Do not incrementally follow links from leaf files.
 
-If the macro fight structure is not already obvious, read:
-`archetypes/archetype-router.md`
+## R2 — fight-scene archetype
 
-Choose one primary archetype for a short sequence.
+Archetype is optional. Load one only when a macro fight engine adds information beyond the user's brief.
 
-Examples:
+Direct map when obvious:
 - continuous pressure -> `archetypes/pressure-duel.md`
 - defense/counter -> `archetypes/counter-duel.md`
 - chase while fighting -> `archetypes/pursuit-fight.md`
-- narrow corridor -> `archetypes/confined-space.md`
-- stairs / height -> `archetypes/vertical-terrain.md`
-- props / architecture -> `archetypes/environment-driven.md`
+- narrow corridor/room -> `archetypes/confined-space.md`
+- stairs/height -> `archetypes/vertical-terrain.md`
+- props/architecture drive the fight -> `archetypes/environment-driven.md`
 - one-vs-many -> `archetypes/outnumbered.md`
 - boss escalation -> `archetypes/boss-escalation.md`
 - evenly matched masters -> `archetypes/peer-duel-escalation.md`
-- courtyard wuxia -> `archetypes/wuxia-courtyard.md`
+- courtyard/long-corridor wuxia driven by architecture -> `archetypes/wuxia-courtyard.md`
 
-Do not load multiple archetypes merely for inspiration.
+Read `archetypes/archetype-router.md` only when the archetype itself is ambiguous.
+Never load multiple archetypes merely for inspiration.
 
 ### R2A — one-vs-many specialization
 
-Whenever `archetypes/outnumbered.md` is selected, also read:
+When `archetypes/outnumbered.md` is selected, also read:
 `multi-opponent/multi-opponent-router.md`
 
-Then selectively load only the needed files:
-- `multi-opponent/active-attacker-scheduling.md`
-- `multi-opponent/spatial-funneling.md`
-- `multi-opponent/protagonist-centric-directing.md`
-- `multi-opponent/recovery-reentry-and-sound.md`
+Default short-scene specialization:
+- load `active-attacker-scheduling.md` when threat handoff / anti-turn-taking is the main risk,
+- load `spatial-funneling.md` when environment / lanes / encirclement are the main risk,
+- load `protagonist-centric-directing.md` only when group cinematography is explicitly important,
+- load `recovery-reentry-and-sound.md` only when persistence/reentry/off-screen threat sound matters.
 
-Do not treat one-vs-many as several independent 1v1 rounds.
+Normally select **1-2** multi-opponent leaf files, not all four.
 
-## R3 — choose base style
+## R3 — base style
 
 Load the exact style file when explicitly named.
 
@@ -107,52 +97,74 @@ Load the exact style file when explicitly named.
 | 劈挂 / Pigua | `styles/chinese/pigua.md` |
 | 翻子 / Fanzi | `styles/chinese/fanzi.md` |
 
-If the user only says "中国武术", read `style-index.md` first, then select one family based on requested range and movement character.
+Read `style-index.md` only when exact style identity cannot be resolved from the user request or this table.
 
-## R4 — choose cinematic layer
+## R4 — cinematic transformation
 
 | Intent | Route |
 |---|---|
 | 写实武侠 / grounded wuxia | `cinematic/grounded-wuxia.md` |
-| 轻功 / 借物腾挪 | `cinematic/qinggong.md` |
-| 港式动作摄影 | `cinematic/hong-kong-action-language.md` |
+| explicit 轻功 / wall-step / pillar-step / railing leap / airborne wuxia | `cinematic/qinggong.md` |
+| generic 港式动作 without a named profile | `cinematic/hong-kong-action-language.md` |
 | 现代写实近身动作 | `cinematic/grounded-modern-action.md` |
 
-Cinematic files never replace the base style.
+Rules:
+- Wuxia never replaces base martial-art mechanics.
+- `qinggong.md` is **not** loaded merely because the genre is wuxia.
+- If a specific action-cinema Style Profile is selected, normally skip generic `hong-kong-action-language.md`.
 
-## R5 — mixed-style fight
+## R5 — mixed-style pairing
 
-If two fighters use different systems and the tactical mismatch matters, load:
-`pairings/style-vs-style.md`
+Load `pairings/style-vs-style.md` only when two different systems create a meaningful tactical conflict that the choreography must express.
+
+Two different style labels alone are not enough reason.
 
 ## R6 — combination grammar
 
-If the problem is “how should one move causally become the next,” read:
-`combinations/combination-router.md`
+Baseline continuity is already enforced by Zero Idle. Do **not** load Combination by default.
 
-Default to at most one combination file for a short fight.
+Read `combinations/combination-router.md` only when one specific transition problem is central:
+- pressure must chain through hit/miss/block,
+- defense must convert to counter,
+- striking must collapse into clinch/throw,
+- preferred range repeatedly changes,
+- miss/landing/stumble must drive the next beat,
+- grounded wuxia architecture must create a causal spatial chain.
 
-## R7 — directing language
+Default: at most one combination leaf for a short fight.
 
-If the request concerns cinematic framing, POV, impact inserts, camera movement, occlusion cuts, destruction, long-take vs fast-cut rhythm, read:
-`directing/directing-router.md`
+## R7 — directing
 
-Then load only the 1-2 directing files that solve the current visual problem.
+Do not load Directing merely because the output is a video prompt. The universal shot-function rules in `SKILL.md` are enough for ordinary coverage.
 
-If the user asks for a named filmmaker/choreographer/action-cinema tradition reference, use:
-`directing/style-profiles/style-profile-index.md`
-and then the exact selected profile.
+Read `directing/directing-router.md` only when the user explicitly requests or the scene critically depends on:
+- special framing / partial-body shots,
+- POV / attack-to-camera,
+- impact inserts,
+- camera movement,
+- motivated occlusion cuts,
+- environment-damage photography,
+- editing rhythm,
+- complex screen-direction design.
 
-Named profiles are analytical mechanisms only. Final prompt should translate them into abstract camera/staging/rhythm language rather than outputting only “in the style of X”.
+If a named filmmaker/choreographer/action-cinema tradition is requested, load the exact Style Profile. Use `style-profile-index.md` only when the named profile cannot be mapped directly.
 
-## R8 — atomic mechanics only when needed
+Direct profile map:
+- 徐克 / Tsui Hark / 新派港式武侠 -> `directing/style-profiles/tsui-hark-new-wave-wuxia.md`
+- 胡金铨 / King Hu -> `directing/style-profiles/king-hu-rhythmic-wuxia.md`
+- 袁和平 / Yuen Woo-ping -> `directing/style-profiles/yuen-woo-ping-action-design.md`
+- 刘家良 / Lau Kar-leung -> `directing/style-profiles/lau-kar-leung-grounded-martial-arts.md`
+- 洪金宝 / Sammo Hung -> `directing/style-profiles/sammo-hung-practical-action.md`
 
-If exact body mechanics need expansion, read:
-`actions/action-router.md`
+## R8 — atomic mechanics
 
-Do not load all atomic files automatically.
+Read `actions/action-router.md` only when a specific move's biomechanics need more detail than the chosen style already supplies.
 
-## R9 — troubleshooting
+Do not load atomic files just because the style file contains a similar action name.
+
+## R9 — repair / troubleshooting
+
+Core repair files are conditional, not default generation context.
 
 | Failure | Reference |
 |---|---|
@@ -160,35 +172,24 @@ Do not load all atomic files automatically.
 | 脚步漂移 / 瞬移 / 落脚错 | `core/biomechanics.md` |
 | 两人一起乱跳 | `core/aerial-motion.md` |
 | 动作停顿 / 回合制 | `core/momentum-continuity.md` |
-| 镜头遮住动作 | `core/action-camera.md` + relevant `directing/` file |
-| 多人一起扑 / 敌人排队等 / 敌人消失重生 | relevant `multi-opponent/` file |
+| generic camera readability failure | `core/action-camera.md` |
+| specific cinematography failure | exact relevant `directing/` file |
+| 多人一起扑 / 敌人排队 / 敌人消失重生 | exact relevant `multi-opponent/` file |
 
-## R10 — knowledge maintenance
+Do not load `core/action-camera.md` together with several directing files unless the repair explicitly spans both domains.
 
-If the user asks to learn from a reference, expand the library, or extract reusable combat/directing assets, read:
-`reference-ingestion-pipeline.md`
+## R10 — maintenance mode
 
-Route every candidate to exactly one primary target:
-STYLE / ATOMIC ACTION / COMBINATION / ARCHETYPE / MULTI-OPPONENT / DIRECTING / STYLE PROFILE / CINEMATIC / PAIRING / CORE.
+Read `reference-ingestion-pipeline.md` only when the user explicitly asks to learn from a source, expand the library, or maintain references.
 
-Never mutate the library merely because a reference was analyzed; maintenance intent must be explicit.
+Do not read `sources.md`, `reference-schema.md`, `README.md` or `tests/` during normal prompt generation.
 
-## Maximum normal load budget
+## Runtime budget
 
-For one short fight-generation task, default maximum:
-- 1 router
-- 0-1 archetype
-- 0-2 multi-opponent files only for one-vs-many
-- 1-2 base style references
-- 0-1 pairing reference
-- 0-1 combination pattern
-- 0-1 cinematic layer
-- 0-2 directing files
-- 0-1 directing style profile
-- 0-2 atomic action files only when mechanics need expansion
-- 0-1 core repair file
+Obey `routing-contract.md` hard budgets.
 
-Target: usually 3-8 specialized files, not the whole library.
+Typical short generation should use fewer references than the maximum.
+More relevant-looking files are not automatically better.
 
 ## Precedence
 
@@ -197,9 +198,7 @@ User explicit choreography
 > selected base-style mechanics
 > archetype macro-structure
 > multi-opponent scheduling / spatial plausibility
-> combination causality
+> combination causality when specifically needed
 > shot readability / screen continuity
-> cinematic/style-profile transformation
+> cinematic / style-profile transformation
 > optional flourish.
-
-Never force an archetype or visual style choice that contradicts the user's stated fight logic.
