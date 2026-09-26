@@ -2,7 +2,34 @@
 
 Action cinema does not require both fighters or both faces in every shot.
 
-Choose framing by information need and tempo.
+Choose framing by **information need, dramatic emphasis and tempo**, not by a sports-broadcast requirement to keep all fighters fully visible.
+
+## Cinematic coverage principle
+
+A full-body two-shot is primarily a **spatial state shot**.
+Use it to explain:
+- left/right relationship,
+- distance,
+- attack lane,
+- obstacle / environment geometry,
+- major route change,
+- kick / throw / qinggong trajectory that genuinely needs full-body proof,
+- multi-person distribution.
+
+Once the audience understands the geography, do not keep returning to a full-body master after every exchange.
+
+For cinematic fiction, bias coverage toward:
+- single-fighter action,
+- partial opponent,
+- foreground limb threat,
+- torso mechanics,
+- contact / grip / control detail,
+- receiver reaction,
+- footwork / landing detail,
+- environment result.
+
+**Proof the decisive mechanic, not necessarily the whole body.**
+The underlying choreography still requires correct full-body mechanics even when the shot only shows the region that matters.
 
 ## 1. Spatial Relationship Shot
 
@@ -24,17 +51,23 @@ Must show enough floor for footwork when range matters.
 If both fighters are substantially visible and performing complete techniques, the exchange should remain fast, connected and real-time.
 Do not use the spatial two-shot as a slow turn-taking demonstration frame.
 
+### Coverage rule
+Use this shot sparingly after geography is established.
+Return to it only when the spatial relationship materially changes or a complex full-body mechanic needs proof.
+
 ## 2. Single-Fighter Action Shot
 
 One fighter may dominate frame while the opponent is:
 - partially off-screen,
 - foreground blur,
 - only an arm/leg entering frame,
-- temporarily hidden by obstacle.
+- temporarily hidden by obstacle,
+- fully off-screen but spatially inferable from prior direction.
 
 Use when the important information is:
 - attack preparation,
 - acceleration,
+- body mechanics,
 - landing,
 - reaction,
 - pursuit,
@@ -47,7 +80,24 @@ Examples:
 
 Do not imply the absent opponent teleported.
 
-## 3. Limb / Contact Shot
+## 3. Foreground Threat / Partial Attacker
+
+The attacking fighter does not need to remain fully visible.
+
+Frame may emphasize:
+- fist entering from frame edge,
+- shin/foot crossing foreground,
+- forearm driving toward defender,
+- sleeve/body mass briefly wiping across lens-side foreground.
+
+Useful when:
+- one fighter is under sustained pressure,
+- defender mechanics are the main readable subject,
+- speed/depth should increase without chaotic camera motion.
+
+Preserve the known attack side and do not generate disembodied extra limbs.
+
+## 4. Limb / Contact Shot
 
 Frame may contain:
 - fist + sternum,
@@ -65,7 +115,22 @@ Use only after spatial relationship is already understandable.
 Use this shot to emphasize an important contact **without slowing a full two-person exchange**.
 The frame contains less information, so the impact can feel clearer/heavier while body speed remains real-time.
 
-## 4. Footwork Insert
+## 5. Control Mechanics Shot
+
+For wrist capture, arm control, grip transfer, clinch entry or joint manipulation, show the body region that proves the control relationship.
+
+May include only:
+- hands,
+- wrist,
+- forearm,
+- elbow,
+- part of shoulder/torso.
+
+Full bodies are not mandatory when the decisive mechanic is local and the broader geography is already known.
+
+A slight dutch/oblique angle may support a rotational control beat, but camera style must not hide who controls whom.
+
+## 6. Footwork Insert
 
 Show:
 - support foot,
@@ -82,7 +147,7 @@ Useful before/after:
 
 A footwork insert can briefly slow the viewer's perception while the surrounding fight remains fast.
 
-## 5. Torso Mechanics Shot
+## 7. Torso Mechanics Shot
 
 Frame from thighs/hips to shoulders when the information is:
 - hip rotation,
@@ -93,7 +158,7 @@ Frame from thighs/hips to shoulders when the information is:
 
 Useful when a full-body shot would hide the exact force-transfer detail.
 
-## 6. Reaction Insert
+## 8. Reaction / Result Shot
 
 Can isolate:
 - eyes tracking attack,
@@ -101,12 +166,14 @@ Can isolate:
 - shoulder compression,
 - breath interruption,
 - hand losing grip,
-- torso folding around a rib strike.
+- torso folding around a rib strike,
+- receiver stumbling or overrotating after redirection.
 
-Reaction is useful only if it adds information, not because every hit needs a face close-up.
-The attacker does not need to remain fully visible if attack direction was already established.
+The attacker may be partly or fully out of frame if the cause is already established.
 
-## 7. Environmental Result Shot
+Do not cut back to a master merely to show the attacker again.
+
+## 9. Environmental Result Shot
 
 Subject can be:
 - cracked pillar,
@@ -119,15 +186,34 @@ Subject can be:
 
 Character may be partial or temporarily absent.
 
-## 8. Subject alternation rule
+## 10. Visual Anchor Fighter
+
+In a sustained exchange, one fighter may remain the primary readable anchor while the opponent is fragmented by framing.
+
+Useful structure:
+- anchor fighter stays readable in mid-ground,
+- opponent attacks from frame edge / foreground / partial body,
+- camera preserves the anchor long enough for the audience to read continuous defense, redirection or pressure response.
+
+This is especially useful for:
+- barrage defense,
+- Taijiquan/Baguazhang redirection,
+- one-vs-many pressure,
+- sustained pursuit.
+
+The visual anchor may change after a major initiative/state change.
+
+## 11. Subject alternation rule
 
 A cinematic exchange may alternate:
-- both-fighter relation shot,
+- spatial anchor,
 - attacker-only initiation,
+- foreground/partial attacker,
 - contact-only insert,
+- control mechanics insert,
 - defender-only reaction,
 - result/environment shot,
-- re-established two-shot.
+- re-established spatial shot only when needed.
 
 This is preferable to forcing both complete fighters into every frame.
 
@@ -136,36 +222,37 @@ Each new shot must reveal new action information.
 ## Shot-size rule
 
 ### Wide/full-body
-Use for:
-movement route, kicks, throws, qinggong, multiple fighters.
+Use selectively for:
+movement route, major kicks, throws, qinggong, multiple fighters, geography change.
 
 Tempo expectation when two fighters are active:
 **fast / continuous**.
 
-### Medium
-Use for:
-hand-leg relationship, close pressure, tactical angle, bridge/clinch.
+Do not make this the default shot size for most of a cinematic duel.
 
-Tempo expectation:
-fast unless real physical resistance creates a bind.
+### Medium / single-subject medium
+Preferred general cinematic coverage for:
+attack initiation, close pressure, body mechanics, pursuit, defense and environment use.
 
 ### Close
 Use for:
-impact, grip, block, expression, foot plant, local body response.
+impact, grip, block, expression, foot plant, local body response, control mechanics.
 
-May be used to emphasize one moment without slowing the whole duel.
+May emphasize one moment without slowing the whole duel.
 
 ### Extreme close
 Rare; only for a decisive detail.
 
 ## AI rule
 
-Never crop away the body part that proves the mechanics.
+Never crop away the body part that proves the **decisive mechanic**.
 
 Examples:
-- kick shot needs support leg at least once,
-- throw entry needs feet/hips at least once,
+- kick biomechanics need support foot/hip/kicking leg proven at least once when that relationship matters,
+- throw entry needs feet/hips/base removal,
 - qinggong needs push-off and landing proof,
-- close-up impact may follow a wider proof shot.
+- wrist control may need only hands/wrist/forearm,
+- close-up impact may follow a wider proof shot,
+- result shot may show only the receiver once cause is established.
 
-Reject a fight that remains almost entirely in one front-facing two-person master shot.
+Reject a fight that remains almost entirely in one front-facing two-person master shot or repeatedly returns to full-body coverage without a new spatial reason.
