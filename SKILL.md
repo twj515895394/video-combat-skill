@@ -195,6 +195,45 @@ Instead vary description density:
 
 Fast Hong Kong-style choreography may contain many actions as long as important techniques have correct body organization and important contacts remain distinct, consequential and causally connected.
 
+### Universal cinematic coverage hierarchy — mandatory
+
+This skill creates **cinematic fight scenes**, not sports-broadcast coverage or martial-arts demonstrations.
+
+A wide / medium-wide full-body two-shot is primarily a **state-explanation shot**. Use it when the audience needs to understand:
+- left/right relationship,
+- distance and attack lane,
+- major route change,
+- kick / throw / qinggong trajectory that genuinely needs full-body proof,
+- environment geometry,
+- multi-person distribution.
+
+Do **not** use full-body two-shots as the default coverage for most of the fight.
+Do **not** return to a wide master after every exchange simply to prove both fighters still exist.
+
+Once geography is understood, bias cinematic coverage toward whichever information is most interesting now:
+- attacker-only launch,
+- defender-only evasion / recovery,
+- foreground attacking limb,
+- torso / hip mechanics,
+- hand / wrist / forearm control,
+- exact contact point,
+- receiving-body reaction,
+- support-foot / landing detail,
+- environment collision / result,
+- result-only shot.
+
+The absent fighter may remain partial or fully off-screen when their position and attack direction are already inferable.
+
+**Proof the decisive mechanic, not necessarily the whole body.**
+Internal Pose correctness remains complete even when the chosen shot only shows the body region needed to prove the decisive mechanic.
+
+Examples:
+- kick setup may need support foot + hip + kicking leg at least once,
+- wrist control may need only hands + wrist + forearm,
+- torso strike may need palm/fist + receiving torso + shoulder/hip recoil,
+- throw usually needs feet/hips/base removal,
+- impact result may show only receiver + environment.
+
 ### Universal Tempo + Shot Grammar — mandatory
 
 **Slow the observation, not the fight.**
@@ -229,6 +268,52 @@ Shot duration is **not** evenly distributed by default. A coherent 2-4 second fa
 
 Before each cut, ask internally: **What new information does the next shot reveal that the current shot cannot reveal as clearly?** If there is no new information, keep the shot.
 
+### State-change cut — preferred cinematic cut trigger
+
+A particularly strong cut point is when the physical relationship between fighters changes category.
+
+Examples:
+- free striking -> wrist/arm control,
+- striking -> clinch,
+- clinch -> throw,
+- standing exchange -> wall/railing pin,
+- grounded defense -> aerial displacement,
+- attack pressure -> receiver-only recovery,
+- free movement -> environment-supported body control.
+
+When the relationship changes, change the shot to reveal the **new decisive mechanic**.
+For example:
+`fast striking exchange -> wrist capture -> CUT to hands/wrist/forearm control -> CUT to opponent-only loss-of-balance result`.
+
+Do not cut after every technique. Cut when the audience now needs a different kind of information.
+
+### Continuous attack / defense streams
+
+For dense cinematic exchanges, do not compose only as isolated named techniques.
+Allow a continuous **attack stream** to meet a continuous **defense stream**.
+
+Rules:
+- the next attack may begin before the previous limb fully returns if balance and anatomy permit,
+- the defender may move head/torso first and let the hand make only the necessary guiding contact,
+- a defending hand does not automatically retract to guard after every touch,
+- the exit position of one hand/forearm can become the starting position for the next contact,
+- initiative may remain with the attacker across several beats until a real structural failure / capture / redirection flips it.
+
+This creates fast film choreography without requiring impossible simultaneous unrelated motion.
+
+### Contact relay — no automatic guard reset
+
+For rapid hand-fighting / redirection:
+`current contact exit -> next contact start`.
+
+Do not write:
+`parry -> hand returns home -> next parry -> hand returns home`.
+
+Prefer:
+`left hand guides the wrist outside -> remains on that line while torso turns -> right forearm receives the next attack -> left hand transitions into control / frame`.
+
+Use only when style and range support continuous contact. Do not force this grammar into styles that require full disengagement.
+
 Actual slow motion is **off by default**. If explicitly requested, prefer using it on one decisive contact, push-off, near-miss, environment break or receiving-body reaction rather than slowing an entire wide two-person exchange.
 
 Reject:
@@ -236,6 +321,7 @@ Reject:
 - front-facing stand-and-trade choreography,
 - one complete move per person in alternating turns,
 - every shot showing both complete fighters,
+- repeatedly returning to wide/full-body coverage without a geography reason,
 - equal-duration cutting with no information reason,
 - camera motion used to fake energy while bodies move slowly,
 - slow full-body choreography used merely to make technique readable.
@@ -266,7 +352,7 @@ Use `archetypes/outnumbered.md` + `multi-opponent/multi-opponent-router.md`, the
 Use Pairing only when different systems create a meaningful tactical conflict.
 
 ### Combination
-Baseline continuity is already provided by Zero Idle. Load Combination only for a specific transition problem.
+Baseline continuity is already provided by Zero Idle and the universal stream/relay rules. Load Combination only for a specific transition problem beyond those defaults.
 
 ### Atomic Action
 Load only when one move needs more biomechanical detail than its Style reference provides.
@@ -309,9 +395,9 @@ If hits/blocks/collisions look fake, weightless or like actors touching each oth
 
 The camera does not need every fighter, every face or full bodies in every shot.
 
-- wide/full-body: route, footwork, kicks, throws, qinggong, group geography; active two-person exchange should be fast/continuous,
-- medium: attack-defense relationship, bridge/clinch, tactical angle; generally fast unless real physical resistance creates a bind,
-- close: contact, grip, reaction, support/landing detail; use for perceptual emphasis without slowing the whole duel,
+- wide/full-body: use selectively for spatial state, route, kicks, throws, qinggong, group geography; active two-person exchange should be fast/continuous,
+- medium / single-subject medium: preferred general cinematic coverage for attack initiation, pressure, defense, pursuit and body mechanics,
+- close: contact, grip, control, reaction, support/landing detail; use for perceptual emphasis without slowing the whole duel,
 - extreme close: rare decisive information only.
 
 Partial/detail shots must inherit understandable geography.
@@ -330,7 +416,8 @@ When relevant:
 - no impact reaction before visual contact,
 - no limbs passing through the receiving body,
 - no impossible joint orientation or detached-limb motion,
-- no slow turn-taking two-shot as the default representation of combat.
+- no slow turn-taking two-shot as the default representation of combat,
+- no sports-broadcast-style insistence on keeping both complete fighters visible at all times.
 
 ## Output principle
 
