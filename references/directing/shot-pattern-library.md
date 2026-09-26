@@ -18,8 +18,11 @@ opening of exchange, after major position change, after POV/detail burst.
 Tempo rule:
 if both fighters are actively exchanging complete techniques, keep the movement fast and continuous. This is not a slow instructional frame.
 
+Coverage rule:
+this is a spatial anchor, not the default shot for most of the fight.
+
 Do not:
-hold this framing for the entire fight.
+hold this framing for the entire fight or return to it after every small exchange.
 
 ## SP-02 Single Attacker Three-Quarter
 
@@ -331,17 +334,91 @@ AI failure risks:
 - foreground limb contacting camera instead of defender,
 - repeated identical kicks with no body-state progression.
 
+## SP-25 Visual Anchor Fighter
+
+Purpose:
+let one fighter remain the stable readable subject during a dense exchange while the opponent is fragmented by framing.
+
+Composition:
+- anchor fighter occupies a consistent mid-ground zone,
+- opponent may appear as partial body, foreground limb, frame-edge entry or short full-body burst,
+- camera remains stable enough to read the anchor fighter's continuous defense / redirection / pressure response.
+
+Useful:
+- sustained barrage defense,
+- Taijiquan / Baguazhang redirection chains,
+- one-vs-many pressure,
+- pursuit where one fighter remains the audience's orientation reference.
+
+Rule:
+the visual anchor is a **camera role**, not permanent dominance. It may transfer after a major initiative or state change.
+
+Benefit:
+- preserves spatial readability without sports-style full-body coverage,
+- makes foreground attacks feel faster,
+- lets one fighter's body mechanics remain legible through several threats.
+
+## SP-26 Control Mechanics Insert
+
+Purpose:
+prove a local control relationship after the fight changes from free striking to grip/control.
+
+Frame may isolate:
+- hand + wrist,
+- both hands + forearm,
+- elbow + forearm + shoulder edge,
+- clinch grip + torso contact.
+
+Use for:
+- wrist capture,
+- arm drag,
+- grip transfer,
+- joint manipulation,
+- clinch entry,
+- short trap before throw/off-balance.
+
+Show:
+- who controls whom,
+- exact grip/contact,
+- direction of rotation/pull/frame,
+- control change or release.
+
+A slightly oblique/dutch composition is allowed if it clarifies rotational tension, but never at the cost of control readability.
+
+Do not require full-body coverage when the decisive mechanic is local and broader geography is already known.
+
+## SP-27 Result-Only Follow-up
+
+Purpose:
+show the consequence of an already-proven cause without cutting back to both fighters.
+
+Pattern:
+- prior shot proves hit / redirection / wrist control / throw entry,
+- next shot may contain only the receiver or affected environment,
+- result shows stumble, overrotation, forced step, fall, wall catch, railing contact or recovery.
+
+Attacker/controller may remain fully off-screen if the causal direction is already established.
+
+Useful after:
+- wrist-control insert,
+- redirected kick/punch,
+- heavy torso strike,
+- shove/shoulder collision,
+- environment-assisted throw.
+
+This prevents redundant master-shot confirmation and keeps the sequence cinematic.
+
 ## Selection rule
 
 A short sequence does not need every pattern.
 
 Usually select only the patterns needed to create:
-- one spatial anchor,
-- fast complete-body exchange,
+- one spatial anchor when needed,
+- fast exchange or visual-anchor passage,
 - one or more single-subject initiations/reactions,
-- selected contact/details,
+- selected contact/control details,
 - result/recovery,
-- re-establishment only when geography changes.
+- re-establishment only when geography materially changes.
 
 The same pattern should not repeat without a new information purpose.
 
