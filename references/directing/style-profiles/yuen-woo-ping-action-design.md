@@ -26,46 +26,81 @@ https://www.criterion.com/current/posts/7604-once-upon-a-time-in-china-the-compl
 Defense is not passive.
 Blocks, evasions, catches and redirects create the next attack.
 
-### 2. Tempo variation inside one exchange
+A defensive contact must have actual collision mechanics:
+- incoming limb reaches a precise receiving surface,
+- both structures decelerate/compress,
+- the line changes,
+- that changed line immediately creates the counter.
+
+Avoid weightless “parry then counter” wording.
+
+### 2. Contact has a receiving point and physical consequence
+A successful strike should not read as a gesture.
+
+For solid contact, make clear:
+- which striking surface lands,
+- where it lands,
+- force direction,
+- local cloth/body/guard compression,
+- receiver posture/balance change,
+- attacker recoil/follow-through,
+- how that contact state creates the next beat.
+
+This is especially important for palm strikes, forearm checks, elbows, kicks and body collisions.
+
+### 3. Tempo variation inside one exchange
 Use:
 - rapid short burst,
 - brief structural contact,
 - sudden range expansion,
 - immediate recompression.
 
-### 3. Props/sets create technique opportunities
+High move density is valid. Speed should come from continuous physical transitions, not from deleting impact reactions.
+
+### 4. Props/sets create technique opportunities
 Tables, poles, ladders, benches, walls and rails can:
 - redirect route,
 - create height,
 - create obstruction,
-- change attack line.
+- change attack line,
+- receive body weight/impact and visibly react.
 
-### 4. Body mechanics remain legible
+### 5. Body mechanics remain legible
 Even stylized movement should have clear:
 - attack,
+- exact contact or miss,
+- receiving-body response,
 - defense,
 - result.
 
 ## Useful grammar
 
-YW-01 attack -> defense becomes counter.
-YW-02 prop obstruction -> route change -> new attack angle.
-YW-03 long-range kick -> close hand exchange -> environment reopens distance.
+YW-01 attack -> defensive collision -> line displacement -> defense becomes counter.
+YW-02 prop obstruction/contact -> body weight transfers into environment -> route changes -> new attack angle.
+YW-03 long-range kick -> defended at a precise contact line -> close hand exchange -> environment reopens distance.
 YW-04 one fighter uses height/prop while opponent attacks landing zone.
 YW-05 repeated tempo changes without idle reset.
+YW-06 solid hit -> receiving structure breaks/rebalances -> attacker follows the forced recovery rather than waiting.
 
 ## Camera
 
 Favor:
 - readable full-body proof,
 - short reframes when prop/attack direction changes,
-- impact/detail only when it adds new information.
+- impact/detail only when it adds new information,
+- close contact inserts for one or two signature collisions, not every touch.
+
+A close impact shot should reveal force transfer, not merely enlarge the contact point.
 
 ## Prompt translation vocabulary
 
 inventive tempo changes,
 balanced attack-defense choreography,
+precise receiving-point contact,
+visible force transfer,
+weight-bearing defensive collisions,
 prop-driven action geometry,
 set-integrated combat,
 readable full-body martial-arts movement,
-defense that immediately creates counterattack.
+defense that physically becomes counterattack,
+solid torso/guard reactions without exaggerated knockback.
