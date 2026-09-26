@@ -30,7 +30,7 @@ Design body mechanics first, macro fight logic second, cinematography third.
 
 ## Composition model
 
-`BRIEF + OPTIONAL ARCHETYPE + BASE STYLE(S) + OPTIONAL MULTI-OPPONENT + OPTIONAL PAIRING/COMBINATION + OPTIONAL CINEMATIC + OPTIONAL DIRECTING/PROFILE + OPTIONAL COMPOSER PROTOCOL + OPTIONAL ATOMIC/CORE`
+`BRIEF + OPTIONAL ARCHETYPE + BASE STYLE(S) + OPTIONAL MULTI-OPPONENT + OPTIONAL PAIRING/COMBINATION + OPTIONAL CINEMATIC + OPTIONAL DIRECTING/PROFILE + OPTIONAL COMPOSER PROTOCOLS + OPTIONAL ATOMIC/CORE`
 
 **Optional means optional. Never populate every layer by default.**
 
@@ -183,6 +183,46 @@ Instead vary description density:
 
 Fast Hong Kong-style choreography may contain many actions as long as important techniques have correct body organization and important contacts remain distinct, consequential and causally connected.
 
+### Universal Tempo + Shot Grammar — mandatory
+
+**Slow the observation, not the fight.**
+
+When both fighters are substantially visible and performing complete attack-defense techniques in a wide / medium-wide / full-body two-shot:
+- movement should be fast, overlapping and continuous,
+- no one waits motionless for the other to finish a complete technique,
+- no attack-stop-block-stop-counter-stop rhythm,
+- the next threat begins from the physical resolution of the previous beat when mechanics permit it,
+- full-body two-shots are used to prove route, footwork, range change and continuous choreography, not to present slow martial-arts demonstration.
+
+If a beat needs to feel slower, heavier or easier to read, **change the shot instead of slowing both fighters**:
+- cut to the fist/palm and receiving torso,
+- cut to forearm/shin collision,
+- cut to support-foot pivot / boot skid / landing,
+- cut to one fighter's attack initiation,
+- cut to one fighter's recoil/recovery,
+- cut to environment contact/damage,
+- cut to eyes / grip / wrist / shoulder / ribs when that detail is the information.
+
+Not every shot needs both fighters, both faces or full bodies.
+Valid cinematic fight shots include:
+- attacker-only launch,
+- defender-only reaction/recovery,
+- partial opponent entering frame,
+- contact-only insert,
+- footwork-only insert,
+- environment/result-only shot,
+provided spatial direction remains inferable.
+
+Actual slow motion is **off by default**. If explicitly requested, prefer using it on one decisive contact, push-off, near-miss, environment break or receiving-body reaction rather than slowing an entire wide two-person exchange.
+
+Reject:
+- most of the clip held in one static master two-shot,
+- front-facing stand-and-trade choreography,
+- one complete move per person in alternating turns,
+- every shot showing both complete fighters,
+- camera motion used to fake energy while bodies move slowly,
+- slow full-body choreography used merely to make technique readable.
+
 ### Combat-facing
 Active fighters remain oriented toward the immediate threat. Temporary back-facing requires a described pivot/spin/impact/evasion and coherent recovery.
 
@@ -226,6 +266,14 @@ Load `references/composer/body-pose-composer.md` only when:
 The compact Impact Packet above applies to every generation without a leaf read.
 Load `references/composer/contact-impact-composer.md` only when hard-hitting / realistic impact is a central authoring need or previous output looked like fake contact.
 
+### Tempo Shot Composer
+The compact Tempo + Shot rule above applies to every generation without a leaf read.
+Load `references/composer/tempo-shot-composer.md` only when:
+- previous output looked like slow turn-taking / stand-and-trade,
+- shot variety and cinematic pacing are a central authoring requirement,
+- the task explicitly requests fast Hong Kong-style screen choreography,
+- the user asks for deliberate control of wide/medium/close tempo relationships.
+
 ### Cinematic
 Load only for an actual world/movement transformation. Wuxia does not automatically imply Qinggong.
 
@@ -244,9 +292,9 @@ If hits/blocks/collisions look fake, weightless or like actors touching each oth
 
 The camera does not need every fighter, every face or full bodies in every shot.
 
-- wide/full-body: route, footwork, kicks, throws, qinggong, group geography,
-- medium: attack-defense relationship, bridge/clinch, tactical angle,
-- close: contact, grip, reaction, support/landing detail,
+- wide/full-body: route, footwork, kicks, throws, qinggong, group geography; active two-person exchange should be fast/continuous,
+- medium: attack-defense relationship, bridge/clinch, tactical angle; generally fast unless real physical resistance creates a bind,
+- close: contact, grip, reaction, support/landing detail; use for perceptual emphasis without slowing the whole duel,
 - extreme close: rare decisive information only.
 
 Partial/detail shots must inherit understandable geography.
@@ -264,7 +312,8 @@ When relevant:
 - no automatic pose reset after impact,
 - no impact reaction before visual contact,
 - no limbs passing through the receiving body,
-- no impossible joint orientation or detached-limb motion.
+- no impossible joint orientation or detached-limb motion,
+- no slow turn-taking two-shot as the default representation of combat.
 
 ## Output principle
 
