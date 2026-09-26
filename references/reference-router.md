@@ -2,8 +2,7 @@
 
 Selective loading is mandatory. This repository is designed to grow large; broad scanning is a failure mode.
 
-Before any specialized load, read and obey:
-`routing-contract.md`
+`routing-contract.md` must be loaded **once per task before leaf references**. If `SKILL.md` already loaded it, do not load it again.
 
 ## R0 — resolve brief confidence
 
@@ -147,7 +146,7 @@ Read `directing/directing-router.md` only when the user explicitly requests or t
 - editing rhythm,
 - complex screen-direction design.
 
-If a named filmmaker/choreographer/action-cinema tradition is requested, load the exact Style Profile. Use `style-profile-index.md` only when the named profile cannot be mapped directly.
+If a named filmmaker/choreographer/action-cinema tradition is requested, load the exact Style Profile directly when mapped below. Use `style-profile-index.md` only when the requested tradition/profile is ambiguous or not directly mapped.
 
 Direct profile map:
 - 徐克 / Tsui Hark / 新派港式武侠 -> `directing/style-profiles/tsui-hark-new-wave-wuxia.md`
