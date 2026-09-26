@@ -30,6 +30,7 @@ Determine:
 - realism level
 - base combat style(s)
 - fight-scene archetype need
+- multi-opponent need
 - combination need
 - cinematic layer
 - directing need
@@ -57,6 +58,19 @@ Examples:
 - courtyard wuxia -> `archetypes/wuxia-courtyard.md`
 
 Do not load multiple archetypes merely for inspiration.
+
+### R2A — one-vs-many specialization
+
+Whenever `archetypes/outnumbered.md` is selected, also read:
+`multi-opponent/multi-opponent-router.md`
+
+Then selectively load only the needed files:
+- `multi-opponent/active-attacker-scheduling.md`
+- `multi-opponent/spatial-funneling.md`
+- `multi-opponent/protagonist-centric-directing.md`
+- `multi-opponent/recovery-reentry-and-sound.md`
+
+Do not treat one-vs-many as several independent 1v1 rounds.
 
 ## R3 — choose base style
 
@@ -147,6 +161,7 @@ Do not load all atomic files automatically.
 | 两人一起乱跳 | `core/aerial-motion.md` |
 | 动作停顿 / 回合制 | `core/momentum-continuity.md` |
 | 镜头遮住动作 | `core/action-camera.md` + relevant `directing/` file |
+| 多人一起扑 / 敌人排队等 / 敌人消失重生 | relevant `multi-opponent/` file |
 
 ## R10 — knowledge maintenance
 
@@ -154,7 +169,7 @@ If the user asks to learn from a reference, expand the library, or extract reusa
 `reference-ingestion-pipeline.md`
 
 Route every candidate to exactly one primary target:
-STYLE / ATOMIC ACTION / COMBINATION / ARCHETYPE / DIRECTING / STYLE PROFILE / CINEMATIC / PAIRING / CORE.
+STYLE / ATOMIC ACTION / COMBINATION / ARCHETYPE / MULTI-OPPONENT / DIRECTING / STYLE PROFILE / CINEMATIC / PAIRING / CORE.
 
 Never mutate the library merely because a reference was analyzed; maintenance intent must be explicit.
 
@@ -163,6 +178,7 @@ Never mutate the library merely because a reference was analyzed; maintenance in
 For one short fight-generation task, default maximum:
 - 1 router
 - 0-1 archetype
+- 0-2 multi-opponent files only for one-vs-many
 - 1-2 base style references
 - 0-1 pairing reference
 - 0-1 combination pattern
@@ -180,6 +196,7 @@ User explicit choreography
 > physical continuity
 > selected base-style mechanics
 > archetype macro-structure
+> multi-opponent scheduling / spatial plausibility
 > combination causality
 > shot readability / screen continuity
 > cinematic/style-profile transformation
