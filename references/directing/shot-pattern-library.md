@@ -293,6 +293,44 @@ Pattern:
 - defender skids/stumbles/posts/lands,
 - next threat enters frame before defender returns to neutral stance.
 
+## SP-24 Foreground Limb Barrage
+
+Purpose:
+create speed, threat and depth without requiring the attacker to remain fully visible.
+
+Composition:
+- defender stays readable in mid-ground,
+- attacker's fist, forearm, shin, foot or sleeve repeatedly enters from a known frame edge,
+- the attacking limb may dominate the foreground and briefly grow large near lens,
+- attacker's full body can remain partial/off-screen as long as attack direction is already established.
+
+Choreography use:
+- rapid kick barrage,
+- repeated straight/hook entries,
+- defender-only body evasion and redirection,
+- one fighter under sustained pressure.
+
+Defender behavior:
+- torso/head may leave the attack line before the hand/forearm makes guiding contact,
+- each incoming limb should create a new threat line rather than repeat the same pose,
+- defense remains continuous; no reset between attacks.
+
+Why it works:
+- foreground angular speed makes attacks feel faster,
+- defender mechanics stay visually readable,
+- the fight avoids static two-person master-shot staging.
+
+Continuity constraints:
+- preserve the established attack side,
+- do not let the off-screen attacker teleport around the defender,
+- occasional relation shot must re-anchor geography after a major spatial change.
+
+AI failure risks:
+- disembodied extra limbs,
+- attack direction changing between frames,
+- foreground limb contacting camera instead of defender,
+- repeated identical kicks with no body-state progression.
+
 ## Selection rule
 
 A short sequence does not need every pattern.
