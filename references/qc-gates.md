@@ -1,148 +1,79 @@
-# Combat QC Gates
+# Core Combat QC
 
-Run silently before final output.
+Run this compact QC for every generated fight.
+Load specialized QC only when its module is active.
 
-## QC-0 Brief Integrity
-- Are duration, participant count, weapons, environment, initiator, style/realism level and outcome sufficiently known?
-- If a missing core point would materially change choreography, was a concise clarification asked?
-- Was already-known information not asked again?
-- Were minor inferable details allowed to remain inferred?
+## QC-0 Brief
+- core brief is sufficiently known,
+- only material ambiguity was clarified,
+- known information was not re-asked.
 
-## QC-1 Runtime Routing Audit
-Before judging choreography, audit the actual Load Manifest.
+## QC-1 Routing
+- Load Manifest was decided before leaf reads,
+- every loaded leaf has one concrete reason,
+- no leaf triggered a transitive follow-up read,
+- no unrelated sibling files were loaded,
+- task stays within the hard leaf budget defined by `reference-router.md`,
+- if one loaded leaf can be removed without reducing answer quality, remove it.
 
-- Was `routing-contract.md` obeyed?
-- Was the Load Manifest built before leaf reads?
-- Can every loaded leaf be justified by one concrete user need?
-- Did any leaf file trigger a transitive follow-up read? If yes: fail routing.
-- Were sibling files avoided unless explicitly selected by a router?
-- Were `README.md`, `sources.md`, `reference-schema.md`, `tests/` and `reference-ingestion-pipeline.md` excluded from normal generation?
-- Is the task within the correct hard leaf budget?
-- Could any loaded file be removed without reducing answer quality? If yes, remove it.
+Common overlap failures:
+- named Style Profile + generic Hong Kong fallback,
+- qinggong loaded only because genre = wuxia,
+- Combination loaded only because all fights need continuity,
+- Atomic/Core loaded without a specific mechanic/failure,
+- generic camera core + several detailed Directing files.
 
-### Overlap / supersession checks
-- Named Style Profile selected -> generic `cinematic/hong-kong-action-language.md` normally absent.
-- `multi-opponent/protagonist-centric-directing.md` selected -> generic framing file absent unless a special framing problem exists.
-- `qinggong.md` loaded only because an actual elevated movement is required, not merely because genre = wuxia.
-- Combination loaded only for a specific transition problem, not because every fight needs continuity.
-- Atomic file loaded only for one mechanic needing extra detail.
-- Core repair file loaded only for an identified failure/edge case.
-- `core/action-camera.md` and multiple detailed Directing files are not redundantly loaded by default.
+## QC-2 Body Continuity
+For each important beat:
+- initiating limb / body path is understandable,
+- defense/contact/miss is understandable,
+- physical result changes posture, balance, position, line or initiative,
+- exit state can physically produce the next beat,
+- no unexplained reset or teleportation.
 
-## QC-2 Archetype Integrity
-- Was at most one primary archetype selected for a short fight?
-- Does it add macro structure beyond the user's brief?
-- Do the main kinetic phases belong to that engine?
-- Is escalation caused by action/spatial change rather than arbitrary shot variation?
+## QC-3 Facing / Ground / Aerial
+- active opponents remain oriented toward the immediate threat,
+- back-facing has a described cause and recovery,
+- support/push-off/trajectory/landing are coherent for elevated motion,
+- no unsupported floating,
+- default one main airborne subject at a time unless explicitly designed otherwise.
 
-If the user's brief already defines the macro fight engine clearly, it is valid to use no archetype leaf.
+## QC-4 Zero Idle / Style
+- no attack-stop-pose-opponent-turn loop,
+- misses/blocks/landings become usable next states,
+- selected style is visible through range, stance, tools and decisions,
+- cinematic treatment does not erase the base movement system.
 
-## QC-3 Multi-Opponent Scheduling
-Only for one-vs-many:
-- Was `multi-opponent/multi-opponent-router.md` used?
-- Were only 1-2 specialized multi-opponent leaves loaded by default?
-- Is the protagonist route defined before enemy attack allocation?
-- Are there usually 1 active attacker and at most 2 overlapping immediate threats?
-- Are non-active enemies approaching, flanking, blocking, recovering or reentering instead of freezing?
-- Is there a spatial reason the whole group cannot attack simultaneously?
-- Are target switches visible through head/chest/feet/camera reorientation?
+## QC-5 Causal Continuity
+If a Combination reference was loaded:
+- next action exists because the prior state changed,
+- current range/stance supports the continuation,
+- initiative flips for a physical reason.
 
-Fail if enemies simply take neutral turns or all rush simultaneously without lane separation.
+If the same logic was already obvious from Style/archetype, re-check whether the Combination leaf was unnecessary.
 
-## QC-4 Multi-Opponent Spatial Continuity
-For each relevant enemy:
-- location / screen side known?
-- lane known?
-- state known?
-- recovery/displacement known?
-- next plausible entry route known?
+## QC-6 Basic Camera Readability
+- important mechanics are visible at least once,
+- partial/detail shots inherit known geography,
+- attack direction remains coherent,
+- camera does not hide required support foot / throw entry / landing.
 
-Verify that displaced/downed enemies remain spatial conditions and do not teleport.
-
-## QC-5 Body State Continuity
-For every major beat:
-- starting feet known when important?
-- initiating limb known?
-- motion path known?
-- defender response known?
-- contact/miss known?
-- physical result known?
-- exit state supports the next action?
-- torso/facing remains plausible?
-
-Fail if a major beat depends on reset or teleportation.
-
-## QC-6 Combat Facing
-- Active opponents remain visually aware of the immediate threat.
-- No unexplained prolonged back-facing.
-- Any pivot/spin has an entrance, temporary rotation and coherent recovery.
-- In one-vs-many, protagonist target switching is readable.
-
-## QC-7 Ground / Aerial Logic
-- Major jump has a support leg/surface.
-- Push-off direction matches trajectory.
-- Landing is defined when important.
-- No unsupported floating.
-- Default one main airborne subject at a time unless a dual-air exchange is explicitly designed.
-
-## QC-8 Zero Idle
-- No attack-stop-pose-opponent-turn sequence.
-- Misses create landing/overrotation/exposure/distance change.
-- Blocks change line/structure.
-- Impacts change posture, balance, position or initiative.
-- A breathing beat remains physically active rather than resetting the fight.
-
-## QC-9 Style Integrity
-- Style is expressed through range, stance, tools and tactical choices, not just labels.
-- Mixed-style fighters show different decision logic when that contrast matters.
-- Cinematic/directing layers do not erase base style.
-
-## QC-10 Combination Causality
-If a Combination leaf was loaded:
-- Does the next action exist because the previous state changed?
-- Is continuation compatible with current distance and stance?
-- If initiative flips, is there a physical reason?
-
-If these answers were already obvious from the Style/archetype, the Combination file may have been unnecessary — re-check QC-1.
-
-## QC-11 Directing Function
-If detailed Directing was loaded:
-- What is each shot's primary information?
-- Does framing prove that information?
-- If only one fighter/limb/no face is shown, is spatial context still recoverable?
-- Does a detail shot preserve established attack direction?
-- Is the shot adding information rather than decorative coverage?
-
-For one-vs-many, camera priority remains protagonist -> current threat -> next threat -> lane/environment.
-
-## QC-12 Impact / Camera / Environment
-- Impact approach is established before contact/result.
-- Body/material reaction occurs after contact and in the same force direction.
-- Camera movement has a target/reason.
-- Complex mechanics use simpler camera.
-- Props exist before use.
-- Damage occurs after contact and persists.
-- Environment interaction changes route, lane or recovery rather than becoming a detached prop-show.
-
-## QC-13 Style Profile Translation
-If a named profile was loaded:
-- only abstract mechanisms were transferred,
-- no exact scene/shot-order copy,
-- the profile improved staging/rhythm/subject selection instead of replacing choreography,
-- generic Hong Kong fallback was not redundantly loaded.
-
-## QC-14 AI Prompt Safety / Stability
+## QC-7 Stability / Duration
 When relevant:
-- bare hands / gloves / weapons explicitly controlled,
-- speed explicitly controlled,
+- weapons/gloves/bare hands are controlled,
+- speed is controlled,
 - no unexplained screen-side swap,
 - no random synchronized jumping,
-- no simultaneous full-group rush unless lanes make it readable,
-- no automatic pose reset after impact.
+- ~10 seconds uses roughly 3 meaningful kinetic phases rather than too many disconnected moves.
 
-## QC-15 Duration Density
-For ~10 seconds:
-- roughly 3 main kinetic phases,
-- limited readable action nodes,
-- no overload of named techniques,
-- every 2-3 seconds contains meaningful momentum, threat handoff, information or spatial change.
+## Conditional QC
+
+### One-vs-many
+If Multi-Opponent module is active, additionally load:
+`qc/multi-opponent-qc.md`
+
+### Detailed cinematography / Style Profile
+If Directing or a named action-cinema Style Profile is active, additionally load:
+`qc/directing-qc.md`
+
+Do not load either specialized QC for a simple 1v1 that does not use those modules.
