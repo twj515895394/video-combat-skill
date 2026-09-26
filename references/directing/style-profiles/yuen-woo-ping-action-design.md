@@ -18,7 +18,7 @@ Criterion's *Once Upon a Time in China* essay credits Yuen Woo-ping and his brot
 - balance between attack and defense.
 
 Source:
-https://www.criterion.com/current/posts/7604-once-upon-a-time-in-china-the-complete-films-past-master
+https://www.criterion.com/current/posts/7604/once-upon-a-time-in-china-the-complete-films-past-master
 
 ## Profile DNA
 
@@ -48,16 +48,39 @@ For solid contact, make clear:
 
 This is especially important for palm strikes, forearm checks, elbows, kicks and body collisions.
 
-### 3. Tempo variation inside one exchange
-Use:
-- rapid short burst,
-- brief structural contact,
-- sudden range expansion,
-- immediate recompression.
+### 3. Tempo variation comes from shot grammar and action overlap
 
-High move density is valid. Speed should come from continuous physical transitions, not from deleting impact reactions.
+When both fighters are fully or substantially visible:
+- keep the exchange fast,
+- chain attack-defense-counter without neutral reset,
+- let defense physically become counter,
+- allow the next threat to begin while the prior action is still resolving when mechanics permit it.
 
-### 4. Props/sets create technique opportunities
+Do **not** interpret “tempo variation” as two fighters slowly taking turns in a wide shot.
+
+When one beat should feel slower or heavier:
+- cut tighter to contact,
+- isolate one fighter's launch or recovery,
+- show support-foot / grip / receiving-point detail,
+- show environment reaction,
+while the underlying action remains real-time by default.
+
+High move density is valid. Speed should come from continuous physical transitions and cinematic subject selection, not from deleting impact reactions or making camera motion compensate for slow bodies.
+
+### 4. Subject isolation is valid action cinema
+
+A shot does not always need both fighters.
+Useful views include:
+- attacker-only initiation,
+- defender-only recoil/recovery,
+- fist/forearm/leg entering frame from established direction,
+- contact-only insert,
+- footwork/push-off detail,
+- environment-result shot.
+
+The absent opponent remains spatially inferable.
+
+### 5. Props/sets create technique opportunities
 Tables, poles, ladders, benches, walls and rails can:
 - redirect route,
 - create height,
@@ -65,7 +88,7 @@ Tables, poles, ladders, benches, walls and rails can:
 - change attack line,
 - receive body weight/impact and visibly react.
 
-### 5. Body mechanics remain legible
+### 6. Body mechanics remain legible
 Even stylized movement should have clear:
 - attack,
 - exact contact or miss,
@@ -73,34 +96,48 @@ Even stylized movement should have clear:
 - defense,
 - result.
 
+Legibility does not require slow full-body choreography. Use shot changes to reveal the right information.
+
 ## Useful grammar
 
-YW-01 attack -> defensive collision -> line displacement -> defense becomes counter.
+YW-01 attack -> defensive collision -> line displacement -> defense becomes counter before neutral reset.
 YW-02 prop obstruction/contact -> body weight transfers into environment -> route changes -> new attack angle.
 YW-03 long-range kick -> defended at a precise contact line -> close hand exchange -> environment reopens distance.
 YW-04 one fighter uses height/prop while opponent attacks landing zone.
-YW-05 repeated tempo changes without idle reset.
+YW-05 fast two-person burst -> close contact/detail emphasis -> immediate full-speed continuation.
 YW-06 solid hit -> receiving structure breaks/rebalances -> attacker follows the forced recovery rather than waiting.
+YW-07 attacker-only launch -> cut on motion -> defensive contact -> defender-only recovery -> next attacker re-enters.
 
 ## Camera
 
 Favor:
-- readable full-body proof,
+- readable full-body proof for fast complete techniques,
 - short reframes when prop/attack direction changes,
-- impact/detail only when it adds new information,
-- close contact inserts for one or two signature collisions, not every touch.
+- attacker-only or defender-only shots when one side carries the important information,
+- impact/detail shots for one or two signature collisions,
+- cut-on-motion / cut-on-impact rather than slow master-shot demonstration.
 
 A close impact shot should reveal force transfer, not merely enlarge the contact point.
+
+Avoid:
+- entire fight from one frontal two-shot,
+- both fighters slowly alternating one move at a time,
+- every shot showing both faces and complete bodies,
+- excessive camera movement used to hide slow choreography.
 
 ## Prompt translation vocabulary
 
 inventive tempo changes,
-balanced attack-defense choreography,
+fast continuous two-person exchanges,
+defense physically becoming counterattack,
+attack-right overlap,
+single-subject attack initiation,
+single-subject recovery shot,
 precise receiving-point contact,
 visible force transfer,
 weight-bearing defensive collisions,
 prop-driven action geometry,
 set-integrated combat,
 readable full-body martial-arts movement,
-defense that physically becomes counterattack,
+selective contact inserts,
 solid torso/guard reactions without exaggerated knockback.
