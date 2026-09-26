@@ -31,20 +31,41 @@ For each important beat:
 - exit state can physically produce the next beat,
 - no unexplained reset or teleportation.
 
-## QC-3 Facing / Ground / Aerial
+## QC-3 Contact / Impact Physics
+For every meaningful solid hit, block or collision:
+- exact striking surface is understandable,
+- exact receiving point is specified or visually implied precisely,
+- force direction is coherent,
+- local compression / deflection / sudden deceleration is described,
+- receiver structure changes at contact,
+- meaningful force reaches balance / feet / support,
+- attacker also shows recoil, deceleration, redirection or follow-through,
+- reaction starts after contact, not before,
+- the resulting body state feeds the next action.
+
+Reject weightless language such as:
+- “hits him” with no receiving point,
+- “blocks cleanly” with no collision effect,
+- hard torso hit with receiver remaining rigid,
+- generic backward glide with no foot recovery,
+- identical reaction to every strike.
+
+High action density is allowed. Do **not** reduce action count merely because the sequence is fast. Instead require the important contacts to remain mechanically distinct and physically consequential.
+
+## QC-4 Facing / Ground / Aerial
 - active opponents remain oriented toward the immediate threat,
 - back-facing has a described cause and recovery,
 - support/push-off/trajectory/landing are coherent for elevated motion,
 - no unsupported floating,
 - default one main airborne subject at a time unless explicitly designed otherwise.
 
-## QC-4 Zero Idle / Style
+## QC-5 Zero Idle / Style
 - no attack-stop-pose-opponent-turn loop,
 - misses/blocks/landings become usable next states,
 - selected style is visible through range, stance, tools and decisions,
 - cinematic treatment does not erase the base movement system.
 
-## QC-5 Causal Continuity
+## QC-6 Causal Continuity
 If a Combination reference was loaded:
 - next action exists because the prior state changed,
 - current range/stance supports the continuation,
@@ -52,19 +73,20 @@ If a Combination reference was loaded:
 
 If the same logic was already obvious from Style/archetype, re-check whether the Combination leaf was unnecessary.
 
-## QC-6 Basic Camera Readability
+## QC-7 Basic Camera Readability
 - important mechanics are visible at least once,
 - partial/detail shots inherit known geography,
 - attack direction remains coherent,
-- camera does not hide required support foot / throw entry / landing.
+- camera does not hide required support foot / throw entry / landing,
+- at least the signature impacts show enough receiving-body information to read force transfer.
 
-## QC-7 Stability / Duration
+## QC-8 Stability / Duration
 When relevant:
 - weapons/gloves/bare hands are controlled,
 - speed is controlled,
 - no unexplained screen-side swap,
 - no random synchronized jumping,
-- ~10 seconds uses roughly 3 meaningful kinetic phases rather than too many disconnected moves.
+- ~10 seconds may contain dense action, provided it forms a small number of continuous kinetic phases rather than disconnected move lists.
 
 ## Conditional QC
 
