@@ -122,6 +122,70 @@ Require:
 
 A miss that changes nothing is not useful choreography.
 
+## 3A. Redirection / Borrowed-Momentum Contact
+
+Not every powerful exchange stops the attack with a hard collision.
+Some styles and cinematic fights create force by **changing the vector of existing momentum**.
+
+Use this subtype when:
+- the defender clears the body from the attack line,
+- contact occurs after or during the evasion,
+- the defender guides / turns / pulls the incoming limb or body,
+- the attacker keeps much of the original speed,
+- the new vector causes overrotation, overstep, loss of base or whole-body displacement.
+
+Internal chain:
+
+`incoming momentum -> body clears original line -> guiding contact -> vector changes -> attacker's center of mass fails to match new line -> overrotation / overstep / displacement -> continuation`
+
+### C1-R — Light redirection
+Examples:
+- palm guides wrist past centerline,
+- forearm brushes shin outward after torso evasion,
+- shoulder/arm contact turns a straight attack aside.
+
+Need:
+- exact guiding surface,
+- exact incoming surface,
+- original direction,
+- new direction,
+- small structural consequence.
+
+Do **not** invent a large knockback.
+
+### C2-R — Strong momentum conversion
+Examples:
+- fast kick is guided past target and carries attacker into overrotation,
+- charging body is turned toward pillar/rail,
+- captured forearm plus body turn sends attacker across the defender's front.
+
+Need:
+- original attacker speed / committed direction,
+- defender body already clear of the attack line,
+- contact angle that changes rather than fully absorbs force,
+- visible continuation of attacker momentum,
+- attacker's support/base failing to keep up with the redirected center of mass,
+- new displacement / rotation / recovery step,
+- next tactical opening.
+
+### Redirection rule
+
+The defender should not look stronger simply because the opponent flies away.
+The visual logic must show that the **attacker's own committed momentum remains the main energy source**.
+
+Good:
+`the kick passes the defender's cleared ribs; the defender's palm/forearm catches the lower leg from the outside and guides it diagonally past, so the attacker's hips continue rotating and his landing foot crosses farther than intended.`
+
+Bad:
+`the defender lightly touches the leg and the attacker is thrown several meters.`
+
+This subtype is especially useful for:
+- Taijiquan-inspired choreography,
+- Baguazhang angle changes,
+- grappling/off-balancing,
+- Yuen Woo-ping-style attack-defense conversion,
+- fast cinematic exchanges where defense borrows rather than cancels motion.
+
 ## 4. Exact receiving points
 
 Prefer precise, visible regions instead of generic `body` / `torso`.
@@ -276,7 +340,8 @@ Examples:
 - shoulder collision -> torso displacement,
 - forearm check -> limb-line change,
 - low kick -> stance disruption,
-- wall collision -> compression/post/rebound.
+- wall collision -> compression/post/rebound,
+- redirection contact -> attacker oversteps / overrotates / changes landing line.
 
 ## 11. High-density choreography rule
 
@@ -314,6 +379,12 @@ This preserves rapid Hong Kong-style action while keeping the important hits hea
 - guard compresses into body,
 - stance is affected,
 - attacker limb rebounds or changes route.
+
+### Redirection / borrowed momentum
+- defender body clears first or simultaneously,
+- contact does not fully stop the limb,
+- vector changes,
+- attacker momentum continues into a worse base or new route.
 
 Do not describe every defense as a generic `block`.
 
@@ -371,19 +442,22 @@ Reject or rewrite:
 - limbs pass through the body,
 - every hit produces identical backward recoil,
 - block looks like actors tapping arms,
-- heavy hit followed by instant clean stance reset.
+- heavy hit followed by instant clean stance reset,
+- light redirection contact causing impossible explosive knockback,
+- redirected attack stopping dead instead of carrying its original momentum.
 
 ## 17. Final authoring test
 
 For every important impact, ask:
 
-1. What exact surface is striking?
+1. What exact surface is striking or guiding?
 2. What exact point receives it?
-3. In what direction is force traveling?
-4. What changes locally at contact?
-5. What part of receiver structure is interrupted?
-6. How does center of mass / support react?
-7. How does the attacker react to resistance?
-8. What physical state now makes the next action possible?
+3. In what direction is force traveling before contact?
+4. Is the force absorbed, blocked, redirected or borrowed?
+5. What changes locally at contact?
+6. What part of receiver/attacker structure is interrupted?
+7. How does center of mass / support react?
+8. How does the other body react to resistance or redirection?
+9. What physical state now makes the next action possible?
 
-If the answer is missing for a solid/signature contact, the beat is incomplete.
+If the answer is missing for a solid/signature/redirection contact, the beat is incomplete.
