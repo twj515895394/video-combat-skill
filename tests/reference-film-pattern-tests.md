@@ -92,3 +92,91 @@ Expected:
 - do not reproduce the exact shot order or exact choreography,
 - route principles into existing Style / Composer / Directing assets when possible,
 - only create a new asset when the mechanism is genuinely reusable and not already represented.
+
+## Case 9 — Full-body two-shot is not default cinematic coverage
+Input:
+"做影视级双人武侠打斗。"
+
+Expected:
+- establish spatial relation with wide/medium-wide only when needed,
+- do not keep both full fighters visible for most of the fight,
+- after geography is clear, prefer single-subject / partial / contact / control / reaction / result shots,
+- do not return to wide after every exchange,
+- reject sports-broadcast-style coverage unless explicitly requested.
+
+## Case 10 — State-change cut
+Input:
+"两人高速拳掌攻防，随后一人突然抓住对方手腕进入控制。"
+
+Expected:
+- fast free striking may remain in a continuous wider/medium passage,
+- the wrist capture is recognized as a physical relationship state change,
+- cut may move to hand/wrist/forearm control detail,
+- next shot may show opponent-only off-balance/result,
+- do not cut simply because each earlier punch/palm ended.
+
+## Case 11 — Visual Anchor Fighter
+Input:
+"连续攻击很快，但观众要能一直看清防守者的化解。"
+
+Expected:
+- defender may remain mid-ground visual anchor,
+- attacker may be fragmented into foreground limbs / frame-edge entries / partial body,
+- attack side remains consistent,
+- camera does not need to keep both full bodies visible,
+- visual anchor may transfer after initiative/state changes.
+
+## Case 12 — Contact relay / no guard reset
+Input:
+"连续手上攻防，不要一挡就收手再重新摆架。"
+
+Expected:
+- contact exit becomes next contact start when style/range permit,
+- a guiding hand may remain connected / become frame or control,
+- the other hand can receive the next threat while the first contact is resolving,
+- no automatic return to neutral guard after every touch,
+- no impossible simultaneous unrelated motion.
+
+## Case 13 — Control mechanics insert
+Input:
+"抓腕转臂这一下要让观众看懂。"
+
+Expected:
+- may use SP-26 Control Mechanics Insert,
+- frame can contain only hands/wrist/forearm/shoulder edge,
+- exact control direction is readable,
+- full-body view is not mandatory if broader geography is already known,
+- internal full-body balance remains coherent.
+
+## Case 14 — Result-only follow-up
+Input:
+"已经拍清楚抓腕和带转，下一镜只看对手失衡。"
+
+Expected:
+- may use SP-27 Result-Only Follow-up,
+- controller may be fully off-screen,
+- receiver's rotation/step/fall follows the established cause/vector,
+- no redundant return to two-person master shot.
+
+## Case 15 — Decisive mechanic proof
+Input:
+"复杂动作是不是必须每次都拍全身？"
+
+Expected:
+No.
+- prove the body region that makes the decisive mechanic understandable,
+- kick may need foot/hip/leg proof,
+- wrist control may only need hands/wrist/forearm,
+- throw usually needs hips/feet/base removal,
+- impact result may show only receiver/environment,
+- internal Pose Packet remains complete regardless of crop.
+
+## Case 16 — Sports-like coverage failure
+Input:
+"成片动作挺快，但几乎全程都是两个人完整全身同框，看起来像格斗比赛。"
+
+Expected repair:
+- treat this as cinematic coverage/tempo-shot failure even if body speed is fast,
+- prefer `composer/tempo-shot-composer.md` or targeted framing patterns rather than adding more martial-art references,
+- reduce unnecessary master-shot dependency,
+- add single-subject / foreground / control / result information without breaking geography.
