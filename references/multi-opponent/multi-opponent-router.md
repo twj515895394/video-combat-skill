@@ -2,32 +2,46 @@
 
 Use this layer when one protagonist fights 2+ opponents.
 
-This layer does not replace:
-- Fight Scene Archetype,
-- base combat style,
-- atomic mechanics,
-- combination causality,
-- directing grammar.
+This router solves scheduling and spatial problems unique to one-vs-many. It does not replace base style, biomechanics, combination causality or general directing.
 
-It solves the additional scheduling and spatial problems created by multiple opponents.
+## Runtime rule
 
-## Mandatory load for one-vs-many
+Read this router only after `archetypes/outnumbered.md` is selected by the root router.
 
-When `archetypes/outnumbered.md` is selected, read this router.
+Then choose **1-2 specialized multi-opponent leaves by default**.
+Do not load all four merely because they are available.
 
-Then load only the exact files needed:
-
-| Problem | Route |
+| Dominant problem | Route |
 |---|---|
-| 谁当前进攻、谁下一位切入、避免回合制 | `active-attacker-scheduling.md` |
+| 谁当前进攻、下一位如何提前切入、避免回合制 | `active-attacker-scheduling.md` |
 | 主角路线、包围圈、通道压缩、柱子桌子门框 | `spatial-funneling.md` |
-| 镜头始终围绕主角、敌人局部入镜、空间重建 | `protagonist-centric-directing.md` |
-| 被打退敌人如何恢复重入、画外威胁与声音 | `recovery-reentry-and-sound.md` |
+| 镜头必须围绕主角、局部敌人入镜、空间重建 | `protagonist-centric-directing.md` |
+| 被打退敌人恢复重入、画外威胁、声音提示 | `recovery-reentry-and-sound.md` |
 
-## Multi-opponent state classes
+## Selection defaults
 
-Every opponent should occupy one current state:
+### Generic 1-vs-3 / 1-vs-4 choreography
+Prefer:
+- `active-attacker-scheduling.md`
+- `spatial-funneling.md`
 
+These two solve the most common AI failures: turn-taking and simultaneous body chaos.
+
+### Camera-heavy one-vs-many
+Prefer:
+- `active-attacker-scheduling.md`
+- `protagonist-centric-directing.md`
+
+Do not additionally load generic framing unless the user asks for a special shot problem.
+
+### Reentry / persistent enemies / off-screen threat emphasis
+Prefer:
+- one scheduling or spatial file,
+- `recovery-reentry-and-sound.md`
+
+## Opponent state classes
+
+Every relevant opponent should occupy one current state:
 - ACTIVE_ATTACKER
 - SUPPORTING_ATTACKER
 - APPROACHING
@@ -38,40 +52,25 @@ Every opponent should occupy one current state:
 - DOWN / PHASED_OUT
 - REENTERING
 
-Do not let all enemies become ACTIVE_ATTACKER simultaneously.
-
 ## Default active-attacker budget
 
 For short AI-video combat:
-- usually 1 active attacker,
-- occasionally 2 overlapping attackers,
+- usually 1 immediate active attacker,
+- occasionally 2 overlapping immediate threats,
 - remaining opponents stay in movement/support states.
 
-This creates continuous pressure without body merging or synchronized attacks.
+## Core design order
 
-## Core order of design
-
-1. Define protagonist route through the scene.
-2. Define environment choke points.
+1. Define protagonist route.
+2. Define choke points / open lanes.
 3. Assign enemy starting zones.
 4. Schedule attack-right handoffs.
-5. Define recovery/reentry states.
-6. Only then choose individual techniques.
-7. Design camera around protagonist and current threat.
+5. Define recovery/reentry only when it matters.
+6. Choose individual techniques.
+7. Design camera around protagonist and immediate threat.
 
-## 10-second default
+## No transitive loading
 
-Prefer roughly:
-- 0-3s: first pressure + second attacker already entering,
-- 3-6s: route change / funnel / target handoff,
-- 6-10s: renewed overlap, short reversal or breakout.
-
-This is a flexible kinetic structure, not rigid timecode choreography.
-
-## Key principle
-
-Multi-opponent action is not:
-`Enemy A attacks -> protagonist resets -> Enemy B attacks -> protagonist resets.`
-
-It is:
-`Enemy A attack is still resolving -> protagonist displacement opens/closes a lane -> Enemy B begins entry -> protagonist must redirect attention while Enemy A is recovering or re-positioning.`
+This router may authorize the specialized files above.
+The specialized leaf files themselves cannot authorize any further reference reads.
+If another domain becomes necessary, return to the root `reference-router.md` and revise the Load Manifest.
