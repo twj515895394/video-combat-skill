@@ -4,70 +4,55 @@ type: cinematic-layer
 aliases: [港式动作, 香港动作片镜头, Hong Kong action]
 requires_base_style: false
 ai_generation_risk: medium
+routing_status: generic-fallback
 ---
 
-# Hong Kong Action Language
+# Generic Hong Kong Action Language
 
-Use as a general action-cinema language without imitating one living filmmaker's personal style.
+This is a **generic fallback** for Hong Kong action-film readability when the user asks for broad “港式动作 / 香港动作片感觉” but does not specify a particular filmmaker/choreographer profile.
+
+If a specific Style Profile is selected — Tsui Hark, King Hu, Yuen Woo-ping, Lau Kar-leung, Sammo Hung, or another future named profile — this file is normally **not loaded**.
 
 ## Principles
+- fast rhythm remains readable,
+- camera changes because information changes,
+- full-body proof can alternate with impact compression,
+- foreground movement may motivate reframing,
+- characters may leave/re-enter frame while direction stays coherent,
+- physical reaction/displacement matter as much as the strike.
 
-- Action remains readable even when rhythm is fast.
-- Camera position changes because information changes.
-- Full-body proof and impact compression alternate.
-- Foreground objects and clothing can motivate transitions.
-- Characters may leave frame and re-enter; not every shot needs both fighters.
-- Reaction and displacement are as important as the strike.
-
-## Shot toolkit
-
-### Low foot opening
-Boot plant, floor scrape, stance load, sudden run-in.
-
-### Lateral full-body proof
-Best for kicks, sweeps, long exchanges and spatial direction.
-
-### Tight contact insert
-Forearm check, wrist trap, palm compression, elbow line.
-
-### Foreground wipe
-Sleeve/body/pillar crosses lens and hides motivated cut/reframe.
-
-### Landing intercept
-Camera waits at destination; fighter enters and lands into next action.
-
-### Momentum retreat
-Camera backs up because fighter pressure advances toward lens.
-
-### Obstacle reveal
-Pillar/doorway partially hides one subject until action crosses it.
+## Generic shot vocabulary
+- low foot opening,
+- lateral full-body proof,
+- tight contact insert,
+- foreground sleeve/body wipe,
+- landing intercept,
+- short backward camera retreat,
+- obstacle reveal.
 
 ## Rhythm
-
-Do not mechanically cut every second.
-Cut when:
+Cut when information changes:
 - attack phase changes,
 - contact occurs,
-- movement exits frame,
-- obstacle wipes view,
+- subject exits frame,
+- obstacle occludes,
 - height/direction changes,
-- a new body mechanic must be proven.
+- a new mechanic must be proven.
+
+Do not mechanically cut every second.
 
 ## Faces
-
 Face visibility is optional during mechanics.
-Use face/reaction only when it adds threat, pain, intention or recognition.
+Use reaction close-ups only when they add threat, pain, intention or recognition.
 
 ## Impact
-
-Prefer:
-- clear contact,
-- brief camera jolt only at major impact,
-- cloth/body reaction,
-- environmental echo.
-
+Prefer readable contact, short controlled camera reaction, cloth/body response and environment echo.
 Avoid continuous shake.
 
-## Prompt vocabulary
+## Runtime note
+This is a leaf file.
+It does not authorize loading Directing files or Style Profiles.
+Any further load decision must return to `reference-router.md` / `routing-contract.md`.
 
-low-angle foot insert, motivated whip-pan, lateral full-body tracking, foreground sleeve wipe, landing intercept shot, close biomechanical insert, readable impact reaction.
+## Prompt vocabulary
+kinetic Hong Kong action readability, low-angle foot insert, lateral full-body tracking, foreground wipe, landing intercept, close biomechanical insert, readable impact reaction.
