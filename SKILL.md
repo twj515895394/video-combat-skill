@@ -41,6 +41,39 @@ Design body mechanics first, macro fight logic second, cinematography third.
 
 The exit state must physically support the next beat without reset.
 
+### Contact / impact force-transfer — mandatory
+A meaningful hit, block or body collision is not complete at the word `hit`.
+
+For every **solid contact**, describe at least:
+`striking surface -> exact receiving point -> force direction -> local compression/deflection -> posture/balance consequence -> continuation`
+
+Examples of receiving points:
+- upper sternum,
+- lower ribs,
+- shoulder line,
+- forearm,
+- shin,
+- outer thigh,
+- hip,
+- wall / pillar / railing.
+
+Examples of visible force transfer:
+- robe fabric compresses at the contact point,
+- chest/shoulder line jolts or folds,
+- torso rotates toward the struck side,
+- support heel lifts,
+- rear foot slides or catches one recovery step,
+- one knee bends to absorb impact,
+- hand posts against wall/ground/railing to stop loss of balance.
+
+The attacker must also show contact physics: deceleration, recoil, redirected limb path or body follow-through.
+
+For a **block/check**, show actual collision and line change; do not write a weightless “clean block”.
+
+For a **near-miss**, show the missed limb's overextension/landing and the defender's body/cloth reaction to the passing line.
+
+Do not make every contact huge. Minor checks can have small reactions; decisive hits need a complete force-transfer chain.
+
 ### Combat-facing
 Active fighters remain oriented toward the immediate threat. Temporary back-facing requires a described pivot/spin/impact/evasion and coherent recovery.
 
@@ -84,6 +117,8 @@ Use at most one named action-cinema profile unless the user explicitly requests 
 ### Core repair
 Core files are diagnostic, not default context. Load only the failed domain.
 
+If hits/blocks/collisions look fake, weightless or like actors touching each other, load `references/core/contact-impact-physics.md`.
+
 ## Universal shot-function rules
 
 The camera does not need every fighter, every face or full bodies in every shot.
@@ -105,7 +140,9 @@ When relevant:
 - explicit bare-hands / gloves / weapon state,
 - no unsupported floating,
 - no unexplained side swap or teleportation,
-- no automatic pose reset after impact.
+- no automatic pose reset after impact,
+- no impact reaction before visual contact,
+- no limbs passing through the receiving body.
 
 ## Output principle
 
