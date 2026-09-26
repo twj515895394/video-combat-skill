@@ -28,6 +28,30 @@ If the answer is “nothing new,” replace or remove it.
 - throws normally need hips/feet/base removal,
 - result shots may show only the receiver/environment once the cause is established.
 
+## Face / performance
+Apply when the face is clearly readable.
+
+- active combat face is focused / alert rather than blank,
+- gaze follows the opponent, immediate incoming limb, controlled wrist/arm or other current threat-relevant target,
+- committed effort may create brief brow/jaw/neck tension and a short exhale,
+- near-miss may produce a quick eye snap, brief squint/blink or tightened focus,
+- impact facial reaction starts after visible contact, not before,
+- recovery includes breath control and reacquisition of the opponent,
+- facial state carries across cuts instead of resetting to neutral,
+- close-up acting is restrained and state-specific.
+
+Reject:
+- mannequin face during active danger,
+- looking into camera with no POV reason,
+- eyes drifting away from the active threat,
+- permanent angry snarl,
+- constant screaming,
+- casual smile / beauty-model calm during active combat unless character/story requires it,
+- identical grimace after every hit,
+- impact expression before contact.
+
+Do not force facial close-ups when the face does not add new information.
+
 ## Tempo by framing
 - wide / medium-wide two-fighter shots carry fast, continuous body action rather than slow turn-taking,
 - medium close two-person shots remain active unless real clinch/bind resistance justifies reduced speed,
@@ -60,12 +84,14 @@ Reject:
 - foreground/partial attacker shots are allowed,
 - contact-only inserts are allowed,
 - control-mechanics inserts are allowed,
+- face/performance close-ups are allowed when the facial state itself adds new combat information,
 - result/environment-only shots are allowed,
 - the absent fighter remains spatially inferable through established direction, partial limbs, foreground/background relation or prior anchor.
 
 ## Visual anchor
 - one fighter may remain the readable mid-ground anchor while the opponent is fragmented into foreground/edge attacks,
 - this is valid when it improves readability of sustained defense/redirection/pressure,
+- if the anchor face is readable, gaze/expression should evolve with threat, effort, impact and recovery,
 - the anchor may transfer after initiative/state change,
 - the off-screen/partial opponent must not teleport or change attack side without explanation.
 
