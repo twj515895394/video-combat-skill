@@ -14,6 +14,7 @@ Before choosing a camera technique, identify the shot's primary information:
 - impact contact,
 - defense / interception,
 - momentum result,
+- control relationship,
 - environment damage,
 - landing / recovery,
 - subjective threat,
@@ -21,17 +22,33 @@ Before choosing a camera technique, identify the shot's primary information:
 
 One shot should have one primary job and at most one secondary job.
 
+### Cinematic coverage default
+A wide / medium-wide full-body two-shot is mainly a **spatial state shot**, not the default coverage for most of a cinematic fight.
+
+Use it to explain geography, route, major trajectory or full-body mechanics when necessary.
+Once that information is understood, prefer the shot that best reveals the current decisive information:
+- single attacker,
+- single defender,
+- partial/foreground attacker,
+- contact/control detail,
+- footwork/landing,
+- receiver/result/environment.
+
+Do not require both complete fighters to remain visible as if filming a sports match.
+
+If the main problem is overall sports-like coverage, slow turn-taking, too many full-body two-shots, or poor cinematic pacing, return to the root router and prefer `composer/tempo-shot-composer.md` instead of stacking several directing leaves.
+
 ## D1 — Direct routes
 
 | Need | Route |
 |---|---|
-| 景别、只拍手脚/局部、是否需要露脸 | `framing-and-subject-selection.md` |
+| 景别、只拍手脚/局部、是否需要露脸、全景使用比例 | `framing-and-subject-selection.md` |
 | 拳脚打向镜头 / POV / 近镜头威胁 | `attack-to-camera.md` |
 | 命中、格挡、胸口/脸/前臂撞击特写 | `impact-inserts.md` |
 | 跟拍、甩镜、横移、后退、提前等落点 | `camera-movement.md` |
 | 袖子/柱子/身体遮挡切镜 | `occlusion-and-motivated-cuts.md` |
 | 撞墙、断桌、木屑、石粉、环境反馈 | `environment-impact.md` |
-| 长镜头 vs 快切、动作匹配剪辑 | `editing-rhythm.md` |
+| 长镜头 vs 快切、动作匹配剪辑、信息变化切镜 | `editing-rhythm.md` |
 | 全景/中景/近景之间保持方向连续 | `screen-direction-and-continuity.md` |
 | 需要直接选可复用“镜头卡” | `shot-pattern-library.md` |
 
@@ -45,7 +62,8 @@ A Style Profile:
 - does **not** replace Base Combat Style,
 - does **not** override physical continuity,
 - must be translated into abstract mechanisms,
-- must not copy one exact film scene shot-for-shot.
+- must not copy one exact film scene shot-for-shot,
+- does not override the universal cinematic coverage hierarchy unless the user explicitly requests sports/training/master-shot presentation.
 
 ## D3 — Load budget
 
@@ -59,8 +77,10 @@ Do not load the shot-pattern library merely because cinematic shooting is reques
 
 Do not load every directing file.
 
+If a single Composer protocol solves the overall coverage/rhythm failure, prefer it over loading several directing leaves.
+
 ## Precedence
 
-Body mechanics and spatial continuity > shot readability > style profile > flourish.
+Body mechanics and spatial continuity > decisive-mechanic proof > shot readability > style profile > flourish.
 
-If a stylish angle hides foot support, attack line or landing in a mechanically important beat, use the readable angle.
+If a stylish angle hides the mechanic that matters in that beat, use the readable angle; this does **not** mean reverting to a full-body master shot by default.
