@@ -135,6 +135,15 @@ Show:
 - missed limb overextension / forced landing / rotational carry,
 - resulting opening.
 
+#### Redirection / borrowed-momentum contact
+A forceful exchange does not always need a hard stop.
+When the defender clears the attack line and guides an already committed limb/body, preserve the attacker's original momentum and show the vector change.
+
+Use:
+`incoming momentum -> body clears line -> guiding contact -> direction changes -> attacker's center of mass no longer matches the new line -> overstep / overrotation / changed landing -> continuation`
+
+Do not let a light guiding touch create impossible knockback. The attacker's own committed momentum should remain the main energy source.
+
 ### Contact / impact force-transfer — mandatory
 A meaningful hit, block or body collision is not complete at the word `hit`.
 
@@ -146,6 +155,8 @@ The attacker must also show contact physics: deceleration, recoil, redirected li
 For a **block/check**, show actual collision and line change; do not write a weightless `clean block`.
 
 For a **near-miss**, show the missed limb's overextension/landing and the defender's body/cloth reaction to the passing line.
+
+For **redirection**, do not require the defender to stop the attack. Show body evasion, guiding contact, preserved incoming momentum and the attacker's altered recovery/landing line.
 
 Do not make every contact huge. Minor checks can have small reactions; decisive hits need a complete force-transfer chain.
 
@@ -171,7 +182,8 @@ Match the reaction to contact geometry:
 - low kick -> loaded-leg disruption + stance change,
 - forearm block -> guard compression + attack-line redirection,
 - shoulder collision -> center-of-mass displacement,
-- body-to-pillar -> abrupt stop/compression + post/rebound/recovery.
+- body-to-pillar -> abrupt stop/compression + post/rebound/recovery,
+- redirection -> overstep / overrotation / changed landing line using the attacker's existing momentum.
 
 ### High-density action is allowed
 Do **not** reduce action count merely because the sequence is fast.
@@ -213,6 +225,10 @@ Valid cinematic fight shots include:
 - environment/result-only shot,
 provided spatial direction remains inferable.
 
+Shot duration is **not** evenly distributed by default. A coherent 2-4 second fast exchange may stay in one shot, while impact/result/detail shots may be much shorter. Cut when the audience needs different information, not because a fixed amount of time elapsed or one technique ended.
+
+Before each cut, ask internally: **What new information does the next shot reveal that the current shot cannot reveal as clearly?** If there is no new information, keep the shot.
+
 Actual slow motion is **off by default**. If explicitly requested, prefer using it on one decisive contact, push-off, near-miss, environment break or receiving-body reaction rather than slowing an entire wide two-person exchange.
 
 Reject:
@@ -220,6 +236,7 @@ Reject:
 - front-facing stand-and-trade choreography,
 - one complete move per person in alternating turns,
 - every shot showing both complete fighters,
+- equal-duration cutting with no information reason,
 - camera motion used to fake energy while bodies move slowly,
 - slow full-body choreography used merely to make technique readable.
 
