@@ -1,6 +1,9 @@
 # Combat Style Index
 
-This is a registry, not a file to load for every task.
+This is a **style-only registry**.
+
+Read it only when the user's combat style cannot be resolved directly by `reference-router.md`.
+It must not be used as a general reference catalog.
 
 ## Combat sports / modern systems
 
@@ -43,27 +46,18 @@ This is a registry, not a file to load for every task.
 ### Throwing
 - Shuai Jiao -> `styles/chinese/shuai-jiao.md`
 
-## Cinematic layers
+## Selection rule
 
-- Grounded Wuxia -> `cinematic/grounded-wuxia.md`
-- Qinggong -> `cinematic/qinggong.md`
-- Hong Kong action language -> `cinematic/hong-kong-action-language.md`
-- Grounded modern action -> `cinematic/grounded-modern-action.md`
+Use this file to select **one closest movement family/style**, not to load several neighboring styles for inspiration.
 
-## Combination grammar
-
-Combination files are not styles. They solve continuity problems:
-
-- Pressure chains -> `combinations/pressure-chains.md`
-- Counter conversions -> `combinations/counter-conversions.md`
-- Clinch/throw transitions -> `combinations/clinch-throw-transitions.md`
-- Range conversions -> `combinations/range-conversions.md`
-- Recovery/failure chains -> `combinations/recovery-failure-chains.md`
-- Grounded wuxia spatial chains -> `combinations/wuxia-spatial-chains.md`
+If the user says only “中国武术”:
+1. use the brief-confirmation policy if style identity materially changes the requested result,
+2. otherwise choose the single closest family based on requested range / movement character,
+3. load only that style file.
 
 ## Future expansion candidates
 
-Add only when distinct movement logic justifies a separate file:
+Add only when distinct movement logic justifies a separate style file:
 - Jeet Kune Do / interception model
 - Kudo
 - Kyokushin-specific model
@@ -75,18 +69,7 @@ Add only when distinct movement logic justifies a separate file:
 - specific Shaolin branches
 - additional regional Chinese systems
 
-Do not create a file merely because a style name exists.
+## Runtime note
 
-## Useful verified domain anchors
-
-- International Wushu Federation (IWUF): competitive Wushu / Taolu / Sanda.
-- World Boxing: boxing competition rules.
-- WAKO: kickboxing discipline boundaries.
-- IMMAF: MMA rule framework.
-- United World Wrestling: wrestling/grappling.
-- International Judo Federation (IJF): judo sport/refereeing rules.
-- World Taekwondo (WT): taekwondo competition rules.
-- International Brazilian Jiu-Jitsu Federation (IBJJF): BJJ rules.
-- International SAMBO Federation (FIAS): Sport/Combat SAMBO rules.
-
-These are domain anchors, not complete choreography manuals.
+This index does not authorize Cinematic, Combination, Directing, Archetype or Atomic Action references.
+Those domains must be routed independently by `reference-router.md`.
