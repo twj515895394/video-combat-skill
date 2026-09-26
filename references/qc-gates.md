@@ -113,7 +113,32 @@ If the same logic was already obvious from Style/archetype, re-check whether the
 - not every shot is forced to show both fighters or both faces,
 - single-attacker, single-defender, contact-only and result-only shots are allowed when spatial direction is preserved.
 
-## QC-9 Stability / Duration
+## QC-9 Combat Expression / Gaze
+Apply only when a face is clearly readable in medium-close, close-up or extreme close-up framing.
+
+Check:
+- expression matches the current combat state rather than remaining blank,
+- eyes track the opponent / immediate incoming threat / controlled limb,
+- default active-combat expression is focused and alert, not relaxed beauty-pose neutrality,
+- committed effort may briefly tighten brow/jaw/neck and use a short exhale,
+- near-miss / threat may cause a brief squint, blink or eye snap toward the incoming limb,
+- impact reaction begins after visible contact and may briefly interrupt breath / gaze,
+- recovery includes quick breath control and visual reacquisition of the opponent,
+- expression continuity survives cuts; the face does not reset to neutral after every shot.
+
+Reject:
+- mannequin / vacant face during active danger,
+- staring into camera without POV motivation,
+- eyes looking away from the immediate threat,
+- permanent angry snarl,
+- constant screaming,
+- casual smile / beauty-model calm during active fighting unless story-specific,
+- identical grimace for every hit,
+- facial recoil before physical contact.
+
+Do not force facial-expression description into wide shots where the face is too small to matter.
+
+## QC-10 Stability / Duration
 When relevant:
 - weapons/gloves/bare hands are controlled,
 - speed is controlled,
