@@ -257,3 +257,70 @@ Reject / repair:
 - detail shot that breaks attack direction,
 - attacker disappearing spatially after a defender-only reaction shot,
 - high-speed camera orbit used to compensate for slow body choreography.
+
+## 14. Asymmetric Shot Duration
+
+Do **not** divide a 10-second fight into equal-length shots by default.
+
+Shot duration follows the information task, not a metronome.
+
+A valid short fight may contain:
+- one 2.5-4 second continuous high-speed exchange,
+- one 0.3-0.8 second impact/result insert,
+- one 1-2 second displacement / throw / environment event,
+- several very short 0.2-0.6 second detail or reaction shots near escalation.
+
+A long shot can be the **fastest** part of the fight if body action is dense and continuous.
+A short shot can feel slower/perceptually heavier because it isolates one detail.
+
+Reject:
+- every shot receiving equal time regardless of information,
+- cutting every second only because the clip is 10 seconds,
+- shortening a coherent long exchange merely to create fake cinematic variety.
+
+## 15. Information-Driven Cutting
+
+Cut when the audience's information requirement changes.
+
+Useful information changes:
+- spatial relationship -> immediate threat,
+- threat -> exact contact,
+- contact -> receiving-body result,
+- footwork route -> hand/limb detail,
+- grounded exchange -> vertical displacement,
+- body action -> environment consequence,
+- one fighter's initiative -> the other's recovery/counter initiation.
+
+Do not cut merely because:
+- one technique ended,
+- a fixed duration elapsed,
+- every strike “needs its own shot.”
+
+Internal question before every cut:
+**What new information does the next shot reveal that the current shot cannot reveal as clearly?**
+
+If the answer is “none,” keep the current shot.
+
+## 16. Long-Take Density Rule
+
+A continuous 2-4 second shot should not become slow just because it is long.
+
+For a long action shot:
+- attacks can enter from frame edges / foreground,
+- the defender can remain the stable readable subject while threats change,
+- movement may progress through several attack-defense nodes without neutral reset,
+- one fighter may be only partially visible for portions of the shot,
+- body movement supplies tempo; camera may remain relatively stable.
+
+Long take does **not** require:
+- both full bodies always visible,
+- symmetrical staging,
+- slower technique execution,
+- one move per beat.
+
+This is especially useful for:
+- kick barrages,
+- continuous close defense,
+- pursuit exchanges,
+- Taijiquan/Baguazhang-style redirection chains,
+- one-vs-many active-attacker handoffs.
