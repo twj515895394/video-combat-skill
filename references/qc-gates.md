@@ -3,12 +3,33 @@
 Run this compact QC for every generated fight.
 Load specialized QC only when its module is active.
 
-## QC-0 Brief
-- core brief is sufficiently known,
-- only material ambiguity was clarified,
-- known information was not re-asked.
+## QC-0 Brief Gate — blocking
+Before any choreography/prompt output, verify the seven Blocking Core fields from `brief-confirmation.md`:
+- duration,
+- participants / who fights whom,
+- weapon state,
+- environment / fight space,
+- base combat identity or explicit user delegation,
+- physical/cinematic reality level,
+- fight relationship / ending intent or explicit user delegation.
+
+Every field must be `RESOLVED` or `DELEGATED`.
+
+If any blocking field is `UNKNOWN`:
+- fail QC immediately,
+- ask the user only for the unresolved core points,
+- do not output a provisional fight prompt,
+- do not silently infer that missing information was delegated.
+
+Hard distinction:
+- named filmmaker/action profile is **not** base combat identity,
+- e.g. 袁和平/Yuen Woo-ping does not itself resolve martial-art style.
+
+Do not re-ask facts the user already supplied.
+Do not block on minor lens/costume/cut-count details that do not materially change choreography.
 
 ## QC-1 Routing
+- Brief Gate passed **before** Load Manifest construction,
 - Load Manifest was decided before leaf reads,
 - every loaded leaf has one concrete reason,
 - no leaf triggered a transitive follow-up read,
