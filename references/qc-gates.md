@@ -23,7 +23,30 @@ Common overlap failures:
 - Atomic/Core loaded without a specific mechanic/failure,
 - generic camera core + several detailed Directing files.
 
-## QC-2 Body Continuity
+## QC-2 Body Pose / Technique Geometry
+For every important P1-P3 action:
+- support base is understandable,
+- foot orientation supports the hip/pelvis action,
+- supporting knee is mechanically plausible,
+- pelvis/torso/shoulder chain matches the limb path,
+- non-striking hand has a plausible guard/control/balance role,
+- head/gaze remains opponent-aware except for a brief justified rotation,
+- center of mass remains supported or follows a clear trajectory,
+- recovery/landing leads to a usable exit state.
+
+For P2/P3 actions, verify the key-pose chain:
+`START -> LOAD/CHAMBER -> PEAK/CONTACT -> RECOVERY/LANDING -> EXIT`
+
+Reject:
+- kick with no support leg,
+- impossible support-foot / knee / hip orientation,
+- detached arm movement,
+- accidental permanent back-facing,
+- sweep with no lowered center/support base,
+- throw before control/off-balance/body positioning,
+- landing directly into another power move with no base recovery.
+
+## QC-3 Body Continuity
 For each important beat:
 - initiating limb / body path is understandable,
 - defense/contact/miss is understandable,
@@ -31,7 +54,7 @@ For each important beat:
 - exit state can physically produce the next beat,
 - no unexplained reset or teleportation.
 
-## QC-3 Contact / Impact Physics
+## QC-4 Contact / Impact Physics
 For every meaningful solid hit, block or collision:
 - exact striking surface is understandable,
 - exact receiving point is specified or visually implied precisely,
@@ -52,20 +75,28 @@ Reject weightless language such as:
 
 High action density is allowed. Do **not** reduce action count merely because the sequence is fast. Instead require the important contacts to remain mechanically distinct and physically consequential.
 
-## QC-4 Facing / Ground / Aerial
+## QC-5 Facing / Ground / Aerial
 - active opponents remain oriented toward the immediate threat,
 - back-facing has a described cause and recovery,
 - support/push-off/trajectory/landing are coherent for elevated motion,
 - no unsupported floating,
 - default one main airborne subject at a time unless explicitly designed otherwise.
 
-## QC-5 Zero Idle / Style
+## QC-6 Zero Idle / Tempo
 - no attack-stop-pose-opponent-turn loop,
 - misses/blocks/landings become usable next states,
-- selected style is visible through range, stance, tools and decisions,
-- cinematic treatment does not erase the base movement system.
+- when both fighters are substantially visible and exchanging complete techniques, tempo is fast/continuous rather than instructional,
+- slow emphasis is created primarily through tighter framing / detail / reaction / result shots, not slow full-body turn-taking,
+- the next threat may begin during the physical resolution of the previous beat when mechanics permit it,
+- selected style remains visible through range, stance, tools and decisions.
 
-## QC-6 Causal Continuity
+Reject:
+- long static two-person master shot for most of the fight,
+- one fighter waiting motionless while the other completes a full technique,
+- every exchange returning to neutral spacing,
+- artificial slowness used only to make actions readable.
+
+## QC-7 Causal Continuity
 If a Combination reference was loaded:
 - next action exists because the prior state changed,
 - current range/stance supports the continuation,
@@ -73,20 +104,22 @@ If a Combination reference was loaded:
 
 If the same logic was already obvious from Style/archetype, re-check whether the Combination leaf was unnecessary.
 
-## QC-7 Basic Camera Readability
+## QC-8 Basic Camera Readability
 - important mechanics are visible at least once,
 - partial/detail shots inherit known geography,
 - attack direction remains coherent,
 - camera does not hide required support foot / throw entry / landing,
-- at least the signature impacts show enough receiving-body information to read force transfer.
+- signature impacts show enough receiving-body information to read force transfer,
+- not every shot is forced to show both fighters or both faces,
+- single-attacker, single-defender, contact-only and result-only shots are allowed when spatial direction is preserved.
 
-## QC-8 Stability / Duration
+## QC-9 Stability / Duration
 When relevant:
 - weapons/gloves/bare hands are controlled,
 - speed is controlled,
 - no unexplained screen-side swap,
 - no random synchronized jumping,
-- ~10 seconds may contain dense action, provided it forms a small number of continuous kinetic phases rather than disconnected move lists.
+- ~10 seconds may contain dense action, provided it forms continuous kinetic phases rather than disconnected move lists.
 
 ## Conditional QC
 
