@@ -5,130 +5,95 @@ description: Design physically continuous fight choreography and cinematic AI-vi
 
 # Video Combat Director
 
-Design the fight as a physical state machine first, then decide the macro fight engine, then decide how cinema reveals the action.
+Design body mechanics first, macro fight logic second, cinematography third.
 
 ## Mandatory runtime order
 
-1. Resolve the brief: duration, participants, weapons, environment, initiator, combat style(s), realism/wuxia level, desired outcome and target format when relevant.
+1. Resolve the brief: duration, participants, weapons, environment, initiator, combat style(s), realism/wuxia level, outcome and target format when relevant.
 2. If a missing core point would materially change choreography, use `references/brief-confirmation.md`; otherwise do not ask.
-3. Read `references/routing-contract.md`.
-4. Read `references/reference-router.md`.
-5. Build the complete internal Load Manifest **before** reading specialized leaf references.
-6. Load only the exact leaf files authorized by the router and within budget.
-7. Build choreography and spatial ledger.
-8. Add cinematography only after body mechanics and continuity are valid.
-9. Run `references/qc-gates.md`.
-10. Output the user's requested format.
+3. Read `references/reference-router.md`.
+4. Build the complete internal Load Manifest **before** specialized leaf reads.
+5. Load only exact references authorized by the router and within its hard budget.
+6. Build choreography + spatial ledger.
+7. Add cinematography only after physical continuity is valid.
+8. Run compact `references/qc-gates.md`; load its specialized QC only when that module is active.
+9. Output the user's requested format.
 
-## Runtime routing hard rules
+## Runtime loading rules
 
 - Never recursively scan `references/`.
 - Never follow a cross-reference from a leaf file automatically.
-- Only router/index files listed in `routing-contract.md` may authorize another read.
-- Do not read `README.md`, `sources.md`, `reference-schema.md`, `tests/` or `reference-ingestion-pipeline.md` during normal generation.
-- Stop loading when the current Load Manifest already answers the fight engine, movement language, causal continuity, spatial continuity and required camera information.
+- Only authorized router/index files can open another reference.
+- Do not read `README.md`, `sources.md`, `reference-schema.md`, `tests/`, `reference-ingestion-pipeline.md` or full `routing-contract.md` during ordinary generation.
+- `routing-contract.md` is the full governance/audit specification; `reference-router.md` contains the runtime subset needed for generation.
+- Stop loading once the manifest already supplies fight engine, movement language, continuity, space and required camera information.
 
 ## Composition model
 
-`BRIEF + OPTIONAL ARCHETYPE + BASE STYLE(S) + OPTIONAL MULTI-OPPONENT LAYER + OPTIONAL PAIRING/COMBINATION + OPTIONAL CINEMATIC + OPTIONAL DIRECTING/PROFILE + OPTIONAL ATOMIC/CORE DETAIL`
+`BRIEF + OPTIONAL ARCHETYPE + BASE STYLE(S) + OPTIONAL MULTI-OPPONENT + OPTIONAL PAIRING/COMBINATION + OPTIONAL CINEMATIC + OPTIONAL DIRECTING/PROFILE + OPTIONAL ATOMIC/CORE`
 
-Optional means optional. Do not populate every layer by default.
+**Optional means optional. Never populate every layer by default.**
 
 ## Universal choreography rules
 
-### Hard biomechanics
-For every important action beat:
-
+### Biomechanical beat
 `Starting State -> Initiating Limb -> Motion Path -> Defensive Response -> Contact/Miss -> Physical Result -> Exit State`
 
-Exit State should establish enough of:
-- foot placement,
-- torso/facing direction,
-- balance,
-- distance,
-- current momentum,
-- environment relationship,
-for the next action to begin without reset.
+The exit state must physically support the next beat without reset.
 
-### Combat-facing lock
-During active close combat:
-- head/chest/eyes remain oriented toward the immediate threat,
-- tactical side-on angles are valid,
-- back-facing must be caused by a described pivot/spin/impact/evasion and resolve coherently.
+### Combat-facing
+Active fighters remain oriented toward the immediate threat. Temporary back-facing requires a described pivot/spin/impact/evasion and coherent recovery.
 
 ### Zero Idle
-Never design:
+Avoid:
 `attack -> stop -> pose -> opponent attacks`
 
 Prefer:
-`attack -> block/miss/impact -> changed body/spatial state -> immediate continuation`
+`attack -> block/miss/impact -> changed body/spatial state -> continuation`
 
-Misses, catches, stumbles, wall contact and landings are usable choreography states.
+Misses, catches, stumbles, environment contact and landings are usable choreography states.
 
-### Ground and aerial logic
-When elevation occurs:
+### Aerial logic
 `support -> compression -> push-off -> trajectory -> landing -> absorption -> continuation`
 
-Default to one main airborne subject at a time unless the user explicitly requests a carefully choreographed dual-air exchange.
+Default to one main airborne subject at a time unless a dual-air exchange is explicitly requested and carefully designed.
 
 ## Conditional modules
 
 ### One-vs-many
-If one protagonist fights 2+ opponents:
-- select `archetypes/outnumbered.md`,
-- read `multi-opponent/multi-opponent-router.md`,
-- load only the 1-2 specialized multi-opponent leaf files required by the actual scene problem.
-
-The detailed scheduling, funneling, directing, recovery and reentry rules live in that module and are not global 1v1 context.
+Use `archetypes/outnumbered.md` + `multi-opponent/multi-opponent-router.md`, then normally only 1-2 specialized Multi-Opponent leaves.
 
 ### Mixed styles
-Load `pairings/style-vs-style.md` only when the tactical contrast between systems matters to the fight engine.
+Use Pairing only when different systems create a meaningful tactical conflict.
 
-### Combination grammar
-Do not load by default. Baseline continuity is already covered by Zero Idle.
-Use Combination only for a specific transition problem.
+### Combination
+Baseline continuity is already provided by Zero Idle. Load Combination only for a specific transition problem.
 
-### Atomic actions
-Load only when a specific move needs extra biomechanical precision beyond the chosen Style reference.
+### Atomic Action
+Load only when one move needs more biomechanical detail than its Style reference provides.
 
-### Cinematic layers
-Use only when the user requests a world/stunt transformation such as grounded wuxia, qinggong or grounded modern action.
-Qinggong is not automatically implied by wuxia.
+### Cinematic
+Load only for an actual world/movement transformation. Wuxia does not automatically imply Qinggong.
 
 ### Directing
-Ordinary video generation does not automatically require the Directing library.
-Load it when the request specifically depends on framing, POV, impact inserts, camera movement, editing rhythm, occlusion, damage photography or another cinematography problem.
+Ordinary video output does not automatically require the Directing library. Load it for explicit/critical framing, POV, impact, camera movement, editing, occlusion or environment-photography needs.
 
-### Action-cinema style profiles
-Use at most one named Style Profile unless the user explicitly asks to compare or hybridize traditions.
-Translate the profile into abstract staging/camera/rhythm mechanisms; do not copy one specific scene.
+### Style Profile
+Use at most one named action-cinema profile unless the user explicitly requests comparison/hybridization. Translate mechanisms; do not copy one exact scene.
 
 ### Core repair
-Core files are diagnostic/repair references, not default context.
-Load only the exact failed domain.
+Core files are diagnostic, not default context. Load only the failed domain.
 
 ## Universal shot-function rules
 
-The camera does not need to show every fighter, every face or full bodies in every shot.
+The camera does not need every fighter, every face or full bodies in every shot.
 
-Choose framing by information:
 - wide/full-body: route, footwork, kicks, throws, qinggong, group geography,
 - medium: attack-defense relationship, bridge/clinch, tactical angle,
-- close: contact, grip, guard compression, reaction, foot plant,
-- extreme close: rare decisive detail.
+- close: contact, grip, reaction, support/landing detail,
+- extreme close: rare decisive information only.
 
-Valid action subjects include:
-- fist approaching lens,
-- shin meeting forearm,
-- palm compressing torso fabric,
-- support-foot pivot,
-- landing feet,
-- shoulder hitting wall,
-- sleeve wiping frame,
-- partial incoming threat.
-
-Partial/detail shots must inherit understandable spatial continuity.
-
+Partial/detail shots must inherit understandable geography.
 Complex body mechanics -> simpler camera.
 Simple body trajectory -> more expressive camera may be used.
 
@@ -136,13 +101,12 @@ Simple body trajectory -> more expressive camera may be used.
 
 When relevant:
 - raw 1.0x real-time speed,
-- zero slow-motion unless explicitly requested,
-- explicit bare hands / gloves / weapons constraints,
+- zero slow-motion unless requested,
+- explicit bare-hands / gloves / weapon state,
 - no unsupported floating,
 - no unexplained side swap or teleportation,
 - no automatic pose reset after impact.
 
 ## Output principle
 
-Reference material is a mechanics/directing vocabulary, not text to copy verbatim.
-Translate only the selected knowledge into the user's exact fighters, duration, space, desired result and visual intent.
+References are mechanics/directing vocabulary, not prose to copy. Use only the selected knowledge for the user's exact fighters, duration, space and visual intent.
