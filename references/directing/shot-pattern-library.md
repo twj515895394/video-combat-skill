@@ -15,20 +15,25 @@ medium-wide / full-body.
 Use:
 opening of exchange, after major position change, after POV/detail burst.
 
+Tempo rule:
+if both fighters are actively exchanging complete techniques, keep the movement fast and continuous. This is not a slow instructional frame.
+
 Do not:
 hold this framing for the entire fight.
 
 ## SP-02 Single Attacker Three-Quarter
 
 Purpose:
-show attack preparation, body mechanics and forward pressure.
+show attack preparation, acceleration, body mechanics and forward pressure.
 
 Frame:
 attacker dominates 60-80% of frame.
-Defender may appear only as shoulder/arm/edge.
+Defender may appear only as shoulder/arm/edge or remain just outside frame.
 
 Useful:
-punch chain, kick chamber, qinggong push-off.
+punch chain, kick chamber, qinggong push-off, pursuit initiation.
+
+This shot allows a fast attack to begin before cutting to contact/defense.
 
 ## SP-03 Single Defender Reaction
 
@@ -39,10 +44,11 @@ Attacker may be represented by:
 - fist entering edge,
 - leg crossing foreground,
 - sleeve,
-- shadow/motion cue.
+- shadow/motion cue,
+- established off-screen attack direction.
 
 Useful:
-slip, forearm check, stumble, wall catch.
+slip, forearm check, stumble, wall catch, boot skid, balance recovery.
 
 ## SP-04 Attack Toward Lens
 
@@ -60,13 +66,13 @@ Use sparingly.
 ## SP-05 Fist / Palm-to-Chest Contact Insert
 
 Purpose:
-prove decisive torso impact.
+prove decisive torso impact without slowing the whole exchange.
 
 Frame:
 hand/forearm + receiver chest/shoulder region.
 
 Show:
-approach -> cloth compression -> torso recoil.
+approach -> contact -> cloth compression -> structural recoil.
 
 Faces optional.
 
@@ -79,7 +85,7 @@ Frame:
 incoming limb and defensive forearm dominate.
 
 Show:
-contact direction and exit direction.
+collision, sudden deceleration, compression/redirection and exit direction.
 
 ## SP-07 Foot Pivot Insert
 
@@ -92,7 +98,7 @@ boots/feet and lower legs.
 Use:
 round kick, hook, body turn, throw entry.
 
-Can open or bridge between body shots.
+Can briefly emphasize technique detail while the surrounding fight remains fast.
 
 ## SP-08 Push-Off Insert
 
@@ -179,15 +185,16 @@ first foot -> knee absorption -> continuation.
 ## SP-15 Impact Result Shot
 
 Purpose:
-show consequence instead of strike.
+show consequence instead of repeating the strike.
 
 Examples:
 - receiver stumbles,
 - shoulder hits pillar,
 - body slides across bench,
-- foot catches balance.
+- foot catches balance,
+- defender's torso folds around the hit.
 
-Attacker may be partly off-screen.
+Attacker may be partly or fully off-screen if direction is established.
 
 ## SP-16 Environment Damage Insert
 
@@ -252,14 +259,52 @@ wuxia chase,
 pillar/doorway movement,
 fast pursuit.
 
+## SP-21 Attack-Handoff Cut
+
+Purpose:
+prevent slow turn-taking.
+
+Pattern:
+- shot A ends while Fighter A's attack is still resolving,
+- cut to Fighter B already converting the defense/recovery into counter-initiation,
+- no neutral reset between shots.
+
+Useful:
+parry-to-counter, missed kick-to-entry, impact retreat-to-pursuit.
+
+## SP-22 Single-Subject Launch -> Contact Cut
+
+Purpose:
+let one fighter own the frame during attack initiation.
+
+Pattern:
+- attacker-only medium/full shot shows acceleration/chamber,
+- cut on limb extension,
+- next shot shows contact/block/near-miss detail,
+- opponent need not be fully visible in the first shot.
+
+## SP-23 Defender-Only Recovery -> Re-entry
+
+Purpose:
+show consequence while keeping fight momentum.
+
+Pattern:
+- attacker leaves or remains outside frame,
+- defender skids/stumbles/posts/lands,
+- next threat enters frame before defender returns to neutral stance.
+
 ## Selection rule
 
-A 10-second sequence does not need 20 patterns.
+A short sequence does not need every pattern.
 
-Usually choose:
-- 1 spatial anchor,
-- 1-2 mechanics/proximity patterns,
-- 1 impact/result pattern,
-- optional environment or POV pattern.
+Usually select only the patterns needed to create:
+- one spatial anchor,
+- fast complete-body exchange,
+- one or more single-subject initiations/reactions,
+- selected contact/details,
+- result/recovery,
+- re-establishment only when geography changes.
 
 The same pattern should not repeat without a new information purpose.
+
+Reject overreliance on SP-01. A cinematic fight should not be a static master shot with occasional zooms.
